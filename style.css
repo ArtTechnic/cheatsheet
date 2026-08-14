@@ -171,7 +171,7 @@ body::after {
     overflow: hidden;
     margin-bottom: 12px;
     background-color: WhiteSmoke;
-    box-shadow: 0 4px 8px rgba(40, 40, 40, 0.1);
+    box-shadow: 0 4px 8px DimGray;
 }
 
 .cheat-sheet .table {
@@ -274,7 +274,7 @@ body::after {
     padding: 10px;
     display: inline-block;
     margin: 30px 20px 20px;
-    box-shadow: 0 8px 20px rgba(40, 40, 40, 0.12);
+    box-shadow: 0 8px 20px DimGray;
     border-radius: 6px;
 }
 
