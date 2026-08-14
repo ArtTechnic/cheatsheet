@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Td Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header"><div id="header-inner"><div id="header-spacer"></div><h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1><nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav></div></header>
+        <main class="main"><div class="main-panel">
+            <section class="section">
+            <span class="detail-category">HTML</span>
+            <h2>td</h2>
+            <p>A <i>td</i> (table data) element is the most common cell in a table. It holds a single piece of data -- a number, a word, a date, whatever. Every row of your table is made up of <i>td</i> cells (unless a cell is a header, in which case you use <i>th</i> instead).</p>
+            <p>By default, browsers left-align the text inside <i>td</i> cells. If you want a cell to stretch across multiple columns, use the <i>colspan</i> attribute. For example, <i>colspan</i>="2" makes the cell take up two columns side by side. This is handy for summary rows at the bottom that need to span the whole width of the table.</p>
+            <p>You can also make a cell stretch across multiple rows with the <i>rowspan</i> attribute. This is less common, but it is useful when one label applies to several rows stacked vertically below it.</p>
+            <p>The examples below show both <i>colspan</i> and <i>rowspan</i> in action.</p>
+            <p>Use <code>colspan</code> to merge cells horizontally (across columns):</p>
+            <pre class="detail-code"><code>
+<!--NOT MY HAPPY PLACE-->
+&lt;tr&gt;
+    &lt;td&gt;Notebook&lt;/td&gt;
+    &lt;td&gt;$4&lt;/td&gt;
+    &lt;td&gt;10 in stock&lt;/td&gt;
+&lt;/tr&gt;
+&lt;!-- Cell spans two columns --&gt;
+&lt;tr&gt;
+    &lt;td colspan="2"&gt;Summary total&lt;/td&gt;
+    &lt;td&gt;$4&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+            <table class="detail-example"><tr><th>Item</th><th>Price</th><th>Stock</th></tr><tr><td>Notebook</td><td>$4</td><td>10 in stock</td></tr><tr><td colspan="2">Summary total</td><td>$4</td></tr></table>
+            <p>Use <code>rowspan</code> to merge cells vertically (across rows). This is less common but handy for grouped data where one label applies to multiple rows below it:</p>
+            <pre class="detail-code"><code>&lt;tr&gt;
+    &lt;td rowspan="2"&gt;Office&lt;/td&gt;
+    &lt;td&gt;Pens&lt;/td&gt;
+    &lt;td&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Pencils&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td">MDN reference</a></p>
+            </section>
+        </div></main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

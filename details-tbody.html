@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tbody Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                <span class="detail-category">HTML</span>
+                <h2>tbody</h2>
+                <p>The <i>tbody</i> element holds the main data rows of your table. If your table is a report card, the header row goes in <i>thead</i>, the footer (like a total) goes in <i>tfoot</i>, and all the actual student grades go in <i>tbody</i>. It is the "meat" of the table.</p>
+                <p>In a properly structured table, <i>tbody</i> wraps every single data row between <i>thead</i> and <i>tfoot</i>. Writing it yourself (instead of letting the browser add it automatically) makes your code clearer to read and easier to style with CSS. Even though browsers will insert a <i>tbody</i> for you if you forget, it is better practice to type it out yourself.</p>
+                <p>Always keep your <i>tbody</i> after the <i>thead</i> and before the <i>tfoot</i> in your code. The browser will display them in the correct visual order regardless, but keeping the source order consistent makes your HTML easier to follow.</p>
+                <pre class="detail-code"><code>
+<!--NOT MY HAPPY PLACE-->
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Alex&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Sam&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <table class="detail-example"><thead><tr><th>Name</th><th>Score</th></tr></thead><tbody><tr><td>Alex</td><td>8</td></tr><tr><td>Sam</td><td>9</td></tr></tbody></table>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tbody">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

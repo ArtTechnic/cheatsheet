@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Caption Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>caption</h2>
+                    <p>A caption is like a title for your table. Just like every book has a title on the front cover,
+                        every table should have a caption that tells people what the table is about. The caption goes
+                        inside the table element, right at the very top -- before anything else.</p>
+                    <p>Writing a caption is important because it helps everyone understand the table faster. People who
+                        use screen readers (these are tools that read the page out loud for people who can't see well)
+                        will hear the caption first. This means they know what to expect before they start listening to
+                        all the numbers and words in the table. Always write one clear, short sentence that explains
+                        what the table shows.</p>
+                    <p>If you ever want to move the caption to the bottom of the table instead of the top, you can do
+                        that with the <i>caption-side</i> CSS property -- but that is covered on a different page in
+                        this cheat sheet.</p>
+                    <pre class="detail-code"><code>
+<!--NOT MY HAPPY PLACE-->
+&lt;table&gt;
+    &lt;caption&gt;Monthly total&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Total&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;August&lt;/td&gt;
+            &lt;td&gt;12&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                    <table class="detail-example">
+                        <caption>Monthly total</caption>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>August</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/caption">MDN
+                            reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

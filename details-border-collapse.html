@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Border-collapse Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>border-collapse</h2>
+                    <p>A <i>border-collapse</i> setting of collapse makes the lines around your table cells merge into a
+                        single line. Normally each cell has its own border, so where two cells touch there are two lines
+                        side by side. With collapse, those two lines become one. This makes the table look cleaner and
+                        more like a real grid.</p>
+                    <p>Use collapse when you want your table to look neat and grid-like. If you prefer a bit of space
+                        between the cells, use the <i>separate</i> value instead. The <i>separate</i> value is the
+                        default, so if you do nothing, cells stay separate.</p>
+                    <pre class="detail-code"><code>table {
+    border-collapse: collapse;
+}</code></pre>
+                    <table class="detail-example detail-collapsed">
+                        <tr>
+                            <th>Left</th>
+                            <th>Right</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                        </tr>
+                    </table>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-collapse">MDN
+                            reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

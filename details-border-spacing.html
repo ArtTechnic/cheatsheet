@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Border-spacing Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>border-spacing</h2>
+                    <p>The <i>border-spacing</i> property sets the gap between table cells. It only matters when your
+                        table uses separate borders (which is the default). Think of it like leaving a little breathing
+                        room between each cell in your table.</p>
+                    <p>You give it a number, like 8px. Bigger numbers mean bigger gaps. Smaller numbers mean cells sit
+                        closer together. If you set <i>border-collapse</i> to collapse, <i>border-spacing</i> has no
+                        effect because the cells are merged anyway.</p>
+                    <pre class="detail-code"><code>table {
+    border-collapse: separate;
+    border-spacing: 8px;
+}</code></pre>
+                    <table class="detail-example detail-spaced">
+                        <tr>
+                            <th>Left</th>
+                            <th>Right</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>B</td>
+                        </tr>
+                    </table>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-spacing">MDN
+                            reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Table Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                <span class="detail-category">HTML</span>
+                <h2>table</h2>
+                <p>A table is the HTML element that holds tabular data -- information that fits nicely into rows and columns, like a spreadsheet or a multiplication chart. Each piece of data lives in a cell, and cells are organized into rows and columns so it is easy to read.</p>
+                <p>A well-built table uses several helper elements inside it. The <i>thead</i> holds the header row (the labels at the top), <i>tbody</i> holds all the data rows in the middle, and <i>tfoot</i> holds summary rows at the bottom (like a "Total" row). You should write them in this order in your code, even though the browser will show the footer at the very bottom no matter what.</p>
+                <p>The example below shows a small table with a header row, a couple of data rows, and a total row at the bottom.</p>
+                <pre class="detail-code"><code>
+<!--NOT MY HAPPY PLACE-->
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Language&lt;/th&gt;
+            &lt;th&gt;Type&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;HTML&lt;/td&gt;
+            &lt;td&gt;Markup&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;CSS&lt;/td&gt;
+            &lt;td&gt;Styling&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Total&lt;/th&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                <table class="detail-example"><thead><tr><th>Language</th><th>Type</th></tr></thead><tbody><tr><td>HTML</td><td>Markup</td></tr><tr><td>CSS</td><td>Styling</td></tr></tbody><tfoot><tr><th>Total</th><td>2</td></tr></tfoot></table>
+                <p>The caption element gives the table an accessible title and must come immediately after the opening table tag.</p>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

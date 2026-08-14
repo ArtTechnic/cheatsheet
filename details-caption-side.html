@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Caption-side Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>caption-side</h2>
+                    <p>The <i>caption-side</i> property tells you where the caption of a table should go. You can put it
+                        above the table (that is called top) or below the table (that is called bottom). By default the
+                        caption sits on top.</p>
+                    <p>All you need is one line of CSS to move the caption to the bottom. The example below puts it
+                        underneath the table.</p>
+                    <pre class="detail-code"><code>table {
+    caption-side: bottom;
+}</code></pre>
+                    <table class="detail-example detail-caption-bottom">
+                        <caption>Caption below the table</caption>
+                        <tr>
+                            <th>Item</th>
+                            <th>Count</th>
+                        </tr>
+                        <tr>
+                            <td>Rows</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/caption-side">MDN
+                            reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

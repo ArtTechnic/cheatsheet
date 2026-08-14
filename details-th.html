@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Th Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header"><div id="header-inner"><div id="header-spacer"></div><h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1><nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav></div></header>
+        <main class="main"><div class="main-panel">
+            <section class="section">
+            <span class="detail-category">HTML</span>
+            <h2>th</h2>
+            <p>A <i>th</i> (table header) element creates a header cell. Header cells label the rows or columns of your table. In the example at the top, "Project" and "State" are header cells because they tell you what the data below means. By default, browsers make <i>th</i> text bold and centered so it stands out.</p>
+            <p>There is an important attribute called <i>scope</i> that goes with <i>th</i>. It tells assistive technology (like screen readers) whether the header applies to a column (<i>scope</i>="col") or a row (<i>scope</i>="row"). Without it, a screen reader might read the table in a confusing order. Always add <i>scope</i> to your <i>th</i> cells so everyone can follow along.</p>
+            <p>The example below shows header cells with scope attributes. Notice how the top row uses scope="col" and the leftmost cells in the body use scope="row".</p>
+            <pre class="detail-code"><code>
+<!--NOT MY HAPPY PLACE-->
+&lt;tr&gt;
+    &lt;th scope="col"&gt;Project&lt;/th&gt;
+    &lt;th scope="col"&gt;State&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;th scope="row"&gt;Cheat sheet&lt;/th&gt;
+    &lt;td&gt;Active&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;th scope="row"&gt;Todo list&lt;/th&gt;
+    &lt;td&gt;Done&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+            <table class="detail-example"><thead><tr><th scope="col">Project</th><th scope="col">State</th></tr></thead><tbody><tr><th scope="row">Cheat sheet</th><td>Active</td></tr><tr><th scope="row">Todo list</th><td>Done</td></tr></tbody></table>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/th">MDN reference</a></p>
+            </section>
+        </div></main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

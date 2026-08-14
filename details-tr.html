@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tr Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header"><div id="header-inner"><div id="header-spacer"></div><h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1><nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav></div></header>
+        <main class="main"><div class="main-panel">
+            <section class="section">
+            <span class="detail-category">HTML</span>
+            <h2>tr</h2>
+            <p>A <i>tr</i> (table row) element creates one horizontal line in your table. Inside each <i>tr</i>, you put cells -- <i>td</i> elements for regular data and <i>th</i> elements for headers. Every row of your table, whether it is in the header, body, or footer, is made of <i>tr</i> elements.</p>
+            <p>Try to keep the number of cells consistent from row to row. If one row has three cells and the next row has four, the browser will add an empty cell to fill in the gap. This can make your table look messy, so count your cells carefully when building each row.</p>
+            <p>When the first cell in a row is a header (an <i>th</i> with <i>scope</i>="row"), it acts like a label for that entire row. This is useful for tables where the first column names a thing and the rest of the columns describe it -- like a parts list where the first column is the part name and the other columns are its properties.</p>
+            <pre class="detail-code"><code>
+<!--NOT MY HAPPY PLACE-->
+&lt;tr&gt;
+    &lt;th scope="row"&gt;CPU&lt;/th&gt;
+    &lt;td&gt;Intel Core i7&lt;/td&gt;
+    &lt;td&gt;$320&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;th scope="row"&gt;RAM&lt;/th&gt;
+    &lt;td&gt;16GB DDR4&lt;/td&gt;
+    &lt;td&gt;$80&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+            <table class="detail-example"><thead><tr><th>Part</th><th>Model</th><th>Price</th></tr></thead><tbody><tr><th scope="row">CPU</th><td>Intel Core i7</td><td>$320</td></tr><tr><th scope="row">RAM</th><td>16GB DDR4</td><td>$80</td></tr></tbody></table>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tr">MDN reference</a></p>
+            </section>
+        </div></main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

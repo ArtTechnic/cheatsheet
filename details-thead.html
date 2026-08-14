@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Thead Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header"><div id="header-inner"><div id="header-spacer"></div><h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1><nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav></div></header>
+        <main class="main"><div class="main-panel">
+            <section class="section">
+            <span class="detail-category">HTML</span>
+            <h2>thead</h2>
+                <p>The <i>thead</i> element groups together the header rows at the top of your table. A header row is the row that labels each column -- like the column titles in a spreadsheet. In the example, "Day" and "Hours" are the headers because they tell you what the data below them means.</p>
+                <p>In your HTML code, write the <i>thead</i> before the <i>tbody</i>. Even though the browser always puts the header row at the top visually, keeping your code in the right order makes it easier for you and other developers to read and understand later. The <i>thead</i> is also where you put <i>scope</i>="col" on your <i>th</i> cells so screen readers know which column each header labels.</p>
+                <p>The example below shows a table with a header row and one data row. The headers describe what each column contains.</p>
+            <pre class="detail-code"><code>
+<!-- NOT MY HAPPY PLACE -->
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;&lt;th scope="col"&gt;Day&lt;/th&gt;&lt;th scope="col"&gt;Hours&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Monday&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            <table class="detail-example"><thead><tr><th scope="col">Day</th><th scope="col">Hours</th></tr></thead><tbody><tr><td>Monday</td><td>6</td></tr></tbody></table>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/thead">MDN reference</a></p>
+            </section>
+        </div></main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

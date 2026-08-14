@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Col Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                <span class="detail-category">HTML</span>
+                <h2>col</h2>
+            <p>The <i>col</i> element represents one or more columns inside your table. A column is the vertical stack of cells in the same position. You usually put <i>col</i> elements inside a <i>colgroup</i> so you can style whole columns at once.</p>
+            <p>Each <i>col</i> by itself targets one column. But you can use the <i>span</i> attribute to make one <i>col</i> cover multiple columns. For instance, span="2" means this <i>col</i> applies to two columns side by side. Remember: <i>col</i> elements must live inside a <i>colgroup</i>, and that <i>colgroup</i> must be the first thing inside the table.</p>
+            <p>In the example below, the first column has a grey background to show how it works.</p>
+                <pre class="detail-code"><code>
+<!--NOT MY HAPPY PLACE-->
+&lt;table&gt;
+    &lt;colgroup&gt;
+        &lt;col style="background-color: lightgrey"&gt;
+        &lt;col&gt;
+    &lt;/colgroup&gt;
+    &lt;tr&gt;
+        &lt;td&gt;First column&lt;/td&gt;
+        &lt;td&gt;Second column&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <table class="detail-example"><colgroup><col style="background-color: lightgrey"><col></colgroup><thead><tr><th>Item</th><th>Quantity</th></tr></thead><tbody><tr><td>Folders</td><td>4</td></tr></tbody></table>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

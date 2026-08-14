@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Empty-cells Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="detail-page">
+        <header id="header"><div id="header-inner"><div id="header-spacer"></div><h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1><nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav></div></header>
+        <main class="main"><div class="main-panel">
+            <section class="section">
+            <span class="detail-category">CSS</span>
+            <h2>empty-cells</h2>
+                <p>The <i>empty-cells</i> property controls what happens to cells that have no content inside them. An empty cell is a table cell (either a <i>td</i> or a <i>th</i>) where you wrote nothing between the opening and closing tags.</p>
+                <p>If you set it to show, the browser draws borders and backgrounds around empty cells just like normal cells. If you set it to hide, the borders and backgrounds disappear for those empty spots, but the cell itself stays the same size. This only affects tables where borders are separate (not collapsed).</p>
+                <p>The example below shows a table where one cell is empty. By default, empty cells still show their borders. Try changing the value to hide and see what happens.</p>
+            <pre class="detail-code"><code>table {
+    empty-cells: show;
+}</code></pre>
+            <table class="detail-example"><tr><th>Filled cell</th><th>Empty cell</th></tr><tr><td>Value</td><td></td></tr></table>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/empty-cells">MDN reference</a></p>
+            </section>
+        </div></main>
+        <footer id="footer"><p>Website &copy; ArtTechnic</p></footer>
+    </body>
+</html>

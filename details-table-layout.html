@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Table-layout Details</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%93%8B</text></svg>" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav"><a href="index.html" class="nav-btn">BACK</a></nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>table-layout</h2>
+                    <p>The <i>table-layout</i> property controls how the browser decides how wide each column in your
+                        table should be. It has two common settings: auto and fixed. The auto setting (which is the
+                        default) looks at the content inside each cell to figure out the width. The fixed setting
+                        ignores the content and uses the width you set on the table itself.</p>
+                    <p>With the fixed setting, the browser makes all columns the same width based on the table's total
+                        width. This means the layout does not jump around or shift as the page loads and the content
+                        changes. It is faster because the browser does not need to read every cell first. Use fixed when
+                        you want predictable, steady column widths.</p>
+                    <p>With the auto setting, the browser stretches or shrinks columns to fit their content. This can
+                        look nicer sometimes, but it also means the widths might change while the page is still loading.
+                        If you do not set a width on your table, using fixed will not do much -- so always pair
+                        <i>table-layout</i>: fixed with a width setting.</p>
+                    <pre class="detail-code"><code>table {table-layout: fixed; width: 360px;}</code></pre>
+                    <table class="detail-example detail-fixed-layout">
+                        <tr>
+                            <th>Short</th>
+                            <th>Long content stays in its column</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>Fixed table layout uses predictable column sizes.</td>
+                        </tr>
+                    </table>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/table-layout">MDN
+                            reference</a></p>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>
