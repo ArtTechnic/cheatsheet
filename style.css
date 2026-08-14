@@ -25,14 +25,14 @@ html {
 
 
 #header {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: DimGray;
+    color: WhiteSmoke;
     margin-top: 10px;
     position: sticky;
     top: 10px;
     width: 100vw;
     z-index: 2;
-    box-shadow: 0 8px 16px 16px rgb(240, 240, 240);
+    box-shadow: 0 8px 16px 16px Silver;
 }
 
 #header-inner {
@@ -65,11 +65,11 @@ button {
     width: 50px;
     padding: 4px 4px 4px 4px;
     margin: 4px 0 4px 0;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: DimGray;
+    color: WhiteSmoke;
     border-width: 1px 1px 1px 1px;
     border-style: solid solid solid solid;
-    border-color: rgb(255, 255, 255);
+    border-color: WhiteSmoke;
     border-radius: 0;
     display: inline-block;
     text-align: center;
@@ -77,8 +77,8 @@ button {
 }
 
 .nav-btn:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: WhiteSmoke;
+    color: DimGray;
 }
 
 #html-cheat,
@@ -87,8 +87,8 @@ button {
 }
 
 #footer {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: DimGray;
+    color: WhiteSmoke;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +98,7 @@ button {
     bottom: 10px;
     width: 100vw;
     z-index: 2;
-    box-shadow: 0 -8px 16px 16px rgb(240, 240, 240);
+    box-shadow: 0 -8px 16px 16px Silver;
 }
 
 #footer p {
@@ -106,9 +106,8 @@ button {
 }
 
 
-
 body {
-    background-color: rgb(240, 240, 240);
+    background-color: Silver;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -116,7 +115,7 @@ body {
 
 body::before,
 body::after {
-    background-color: rgb(240, 240, 240);
+    background-color: Silver;
     content: "";
     height: 10px;
     left: 0;
@@ -143,13 +142,13 @@ body::after {
 }
 
 .section {
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid Gainsboro;
     width: auto;
     max-width: 1000px;
     margin: 10px;
     padding: 10px;
     border-radius: 6px;
-    background-color: rgb(240, 240, 240);
+    background-color: Silver;
 }
 
 
@@ -167,12 +166,12 @@ body::after {
 
 /* */
 .table {
-    border: 1px solid rgb(224, 224, 224);
+    border: 1px solid LightGray;
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 12px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    background-color: WhiteSmoke;
+    box-shadow: 0 4px 8px rgba(40, 40, 40, 0.1);
 }
 
 .cheat-sheet .table {
@@ -189,7 +188,7 @@ body::after {
 .table td {
     font-size: 11px;
     padding: 8px;
-    border-right: 1px solid rgb(224, 224, 224); /* vertical lines between columns */
+    border-right: 1px solid LightGray; /* vertical lines between columns */
     text-align: left;
     vertical-align: top;
     overflow-wrap: anywhere;
@@ -197,13 +196,13 @@ body::after {
 }
 
 .table tr {
-    border-bottom: 1px solid rgb(224, 224, 224); /* horizontal line spans full row width */
+    border-bottom: 1px solid LightGray; /* horizontal line spans full row width */
 }
 
 .table thead th {
-    border-bottom: 2px solid rgb(224, 224, 224); /* stronger rule under header */
+    border-bottom: 2px solid LightGray; /* stronger rule under header */
     border-right: none;
-    background: rgb(255, 255, 255);
+    background: WhiteSmoke;
     font-weight: 700;
 }
 
@@ -212,7 +211,7 @@ body::after {
 .table th.no-right { border-right: none; border-left: none; }
 .table tbody td + td + td { border-right: none; }
 .table td.row-control {
-    background-color: rgb(255, 255, 255);
+    background-color: WhiteSmoke;
     cursor: pointer;
     padding: 0;
     height: 32px;
@@ -227,9 +226,9 @@ body::after {
 }
 
 .table td.row-control::after {
-    background-color: rgb(200, 0, 0);
-    border: 1px solid rgb(200, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: Crimson;
+    border: 1px solid Crimson;
+    color: WhiteSmoke;
     content: ">";
     display: grid;
     inset: 6px;
@@ -239,13 +238,13 @@ body::after {
 }
 
 .table td.row-link::after {
-    background-color: rgb(0, 128, 0);
-    border-color: rgb(0, 128, 0);
+    background-color: Green;
+    border-color: Green;
 }
 
 .table td.row-control:hover::after {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: WhiteSmoke;
+    color: DimGray;
 }
 .table tr.no-bottom { border-bottom: none; }
 
@@ -271,18 +270,18 @@ body::after {
 }
 
 .main-panel {
-    background-color: rgb(255, 255, 255);
+    background-color: WhiteSmoke;
     padding: 10px;
     display: inline-block;
     margin: 30px 20px 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(40, 40, 40, 0.12);
     border-radius: 6px;
 }
 
 .detail-category {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    background-color: WhiteSmoke;
+    border: 1px solid DimGray;
+    color: DimGray;
     cursor: default;
     display: inline-block;
     margin-right: 6px;
@@ -304,23 +303,23 @@ body::after {
 }
 
 .detail-code {
-    background-color: rgb(40, 40, 40);
-    border: 1px solid rgb(204, 204, 204);
+    background-color: DimGray;
+    border: 1px solid Gainsboro;
     margin-top: 16px;
     padding: 8px;
-    color: rgb(255, 255, 255);
+    color: WhiteSmoke;
 }
 
 .detail-example {
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid Gainsboro;
     border-collapse: collapse;
     margin-top: 16px;
-    background-color: rgb(255, 255, 255);
+    background-color: WhiteSmoke;
 }
 
 .detail-example th,
 .detail-example td {
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid Gainsboro;
     padding: 6px;
     text-align: left;
 }
