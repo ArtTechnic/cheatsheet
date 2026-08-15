@@ -304,7 +304,7 @@ body::after {
 
 .detail-code {
     background-color: DimGray;
-    border: 1px solid Gainsboro;
+    border: 1px solid black;
     margin-top: 16px;
     padding: 8px;
     color: WhiteSmoke;
