@@ -38,6 +38,7 @@ html {
 #header-inner {
     display: flex;
     align-items: center;
+    width: calc(100% - 80px);
     max-width: 1000px;
     margin: 0 auto;
     padding: 2px 0;
@@ -273,6 +274,9 @@ body::after {
     background-color: WhiteSmoke;
     padding: 10px;
     display: inline-block;
+    width: calc(100% - 40px);
+    max-width: 1040px;
+    min-width: 0;
     margin: 30px 20px 20px;
     box-shadow: 0 8px 20px DimGray;
     border-radius: 6px;
