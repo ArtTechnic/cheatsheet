@@ -318,6 +318,7 @@ body::after {
 .index-page .table td {
     overflow: hidden;
     overflow-wrap: normal;
+    padding: 4px 8px;
     text-overflow: clip;
     white-space: nowrap;
     word-break: normal;
