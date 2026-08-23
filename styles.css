@@ -337,6 +337,10 @@ body::after {
     background-color: WhiteSmoke;
 }
 
+.return-position-pending .index-page .main {
+    visibility: hidden;
+}
+
 .index-page #about > *,
 .index-page .cheat-sheet h2,
 .index-page .cheat-sheet h3,
