@@ -277,18 +277,6 @@ body::after {
     word-break: break-word;
 }
 
-.command-reference,
-.command-reference:visited,
-.command-reference:active {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.command-reference:hover {
-    color: Blue;
-}
-
 .index-page .table th,
 .index-page .table td {
     overflow: hidden;
@@ -367,6 +355,7 @@ body:has(.table tr:target) .main-panel::after {
     border-bottom: 2px solid LightGray; /* stronger rule under header */
     border-right: none;
     background: WhiteSmoke;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -374,43 +363,12 @@ body:has(.table tr:target) .main-panel::after {
 .table td.no-right,
 .table th.no-right { border-right: none; border-left: none; }
 .table tbody td + td + td { border-right: none; }
-.table td.row-control {
-    background-color: WhiteSmoke;
+
+.table tr.clickable-row,
+.table tr.clickable-row * {
     cursor: pointer;
-    padding: 0;
-    height: 32px;
-    box-sizing: border-box;
-    position: relative;
 }
 
-.table td.row-link a {
-    cursor: pointer;
-    inset: 0;
-    position: absolute;
-    z-index: 1;
-}
-
-.table td.row-control::after {
-    background-color: Crimson;
-    border: 1px solid Crimson;
-    color: WhiteSmoke;
-    content: ">";
-    display: grid;
-    inset: 6px;
-    padding-bottom: 2px;
-    place-items: center;
-    position: absolute;
-}
-
-.table td.row-link::after {
-    background-color: Green;
-    border-color: Green;
-}
-
-.table td.row-control:hover::after {
-    background-color: WhiteSmoke;
-    color: DimGray;
-}
 .table tr.no-bottom { border-bottom: none; }
 
 #about h2 {
