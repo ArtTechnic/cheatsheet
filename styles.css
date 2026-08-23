@@ -76,9 +76,20 @@ html {
 }
 
 #header-search input:focus {
+    animation: search-focus-pulse 1.2s ease-in-out infinite alternate;
     border-color: White;
     box-shadow: 0 0 8px White;
     outline: none;
+}
+
+@keyframes search-focus-pulse {
+    from {
+        box-shadow: 0 0 8px White;
+    }
+
+    to {
+        box-shadow: 0 0 16px 3px White;
+    }
 }
 
 .index-page #header-nav {
