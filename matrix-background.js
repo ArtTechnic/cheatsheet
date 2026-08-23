@@ -9,7 +9,7 @@ document.body.appendChild(matrixEdgeFade);
 const matrixCharacters = "0123456789ABCDEF";
 const matrixPixelSize = 1;
 const matrixSubCellSize = 24;
-const matrixCharacterWidthScale = 1.4;
+const matrixCharacterWidthScale = 1.34;
 const matrixCellSize = 16;
 const matrixMobileFontSize = 14;
 const matrixStreamSpeed = 0.48;
