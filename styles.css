@@ -52,6 +52,33 @@ html {
     flex: 1;
 }
 
+.index-page #header-spacer,
+.detail-page #header-spacer {
+    display: none;
+}
+
+#header-search {
+    flex: 1;
+    margin: 0 16px;
+    min-width: 0;
+    position: relative;
+}
+
+#header-search input {
+    background-color: WhiteSmoke;
+    border: 1px solid WhiteSmoke;
+    border-radius: 6px;
+    color: black;
+    cursor: text;
+    display: block;
+    padding: 4px;
+    width: 100%;
+}
+
+.index-page #header-nav {
+    flex: 0 0 auto;
+}
+
 #header-nav {
     flex: 1;
     display: flex;
@@ -82,9 +109,63 @@ button {
     color: DimGray;
 }
 
-#html-cheat,
-#css-cheat {
-    scroll-margin-top: 60px;
+#html-table,
+#css-table {
+    scroll-margin-top: 100px;
+}
+
+#search-error {
+    color: Red;
+    font-size: 1.17em;
+    font-weight: 700;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    white-space: nowrap;
+    z-index: 3;
+}
+
+#search-error[hidden] {
+    display: none;
+}
+
+#search-suggestions {
+    background-color: WhiteSmoke;
+    border: 1px solid DimGray;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 4px Silver;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: calc(100% + 10px);
+    width: 100%;
+    z-index: 3;
+}
+
+#search-suggestions[hidden] {
+    display: none;
+}
+
+#search-suggestion-list {
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+#search-suggestions button {
+    background-color: WhiteSmoke;
+    border: 0;
+    color: black;
+    display: block;
+    margin: 0;
+    padding: 4px;
+    text-align: left;
+    width: 100%;
+}
+
+#search-suggestions button:hover {
+    background-color: DimGray;
+    color: WhiteSmoke;
 }
 
 #footer {
@@ -196,6 +277,18 @@ body::after {
     word-break: break-word;
 }
 
+.command-reference,
+.command-reference:visited,
+.command-reference:active {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.command-reference:hover {
+    color: Blue;
+}
+
 .index-page .table th,
 .index-page .table td {
     overflow: hidden;
@@ -223,6 +316,53 @@ body:has(.table tr:target) .main-panel::after {
     height: 50vh;
 }
 
+.index-page .table tbody tr:target > * {
+    background-color: WhiteSmoke;
+}
+
+.index-page #about > *,
+.index-page .cheat-sheet h2,
+.index-page .cheat-sheet h3,
+.index-page .cheat-sheet > p,
+.index-page .table thead {
+    animation: index-fade-in 500ms ease-out both;
+}
+
+.index-page .table tbody tr:not(:target) {
+    animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
+}
+
+.index-page .table thead th,
+.index-page .table tbody tr:not(:target) td {
+    animation: index-grid-fade-in 500ms ease-out both;
+}
+
+.index-page .main-panel,
+.index-page .section,
+.index-page .table {
+    animation: index-surface-fade-in 500ms ease-out both;
+}
+
+@keyframes index-fade-in {
+    from {
+        opacity: 0;
+    }
+}
+
+@keyframes index-grid-fade-in {
+    from {
+        border-color: transparent;
+    }
+}
+
+@keyframes index-surface-fade-in {
+    from {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
 .table thead th {
     border-bottom: 2px solid LightGray; /* stronger rule under header */
     border-right: none;
@@ -244,6 +384,7 @@ body:has(.table tr:target) .main-panel::after {
 }
 
 .table td.row-link a {
+    cursor: pointer;
     inset: 0;
     position: absolute;
     z-index: 1;
