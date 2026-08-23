@@ -9,6 +9,7 @@ document.body.appendChild(matrixEdgeFade);
 const matrixCharacters = "0123456789ABCDEF";
 const matrixPixelSize = 1;
 const matrixSubCellSize = 24;
+const matrixCharacterWidthScale = 1.4;
 const matrixCellSize = 16;
 const matrixMobileFontSize = 14;
 const matrixStreamSpeed = 0.48;
@@ -57,6 +58,14 @@ const clearMatrixCanvas = () => {
     matrixContext.setTransform(1, 0, 0, 1, 0, 0);
     matrixContext.clearRect(0, 0, matrixCanvas.width, matrixCanvas.height);
     applyMatrixTransform();
+};
+
+const drawMatrixValue = (value, x, y) => {
+    matrixContext.save();
+    matrixContext.translate(x, y);
+    matrixContext.scale(matrixCharacterWidthScale, 1);
+    matrixContext.fillText(value, 0, 0);
+    matrixContext.restore();
 };
 
 const resizeMatrix = () => {
@@ -309,7 +318,7 @@ const drawMatrix = (time) => {
                 if (!trailCells.has(`${x}:${y}`)) {
                     const shade = matrixBaseBrightness[gridRow][gridColumn];
                     matrixContext.fillStyle = `rgba(0, 255, 96, ${shade / matrixTrailShades})`;
-                    matrixContext.fillText(value, x, y);
+                    drawMatrixValue(value, x, y);
                 }
 
                 matrixBaseBrightness[gridRow][gridColumn] = Math.max(
@@ -323,7 +332,7 @@ const drawMatrix = (time) => {
             matrixContext.fillStyle = cell.isHead
                 ? "rgba(255, 255, 255, 1)"
                 : `rgba(0, 255, 96, ${cell.shade / matrixTrailShades})`;
-            matrixContext.fillText(cell.value, cell.x, cell.y);
+            drawMatrixValue(cell.value, cell.x, cell.y);
         });
 
         matrixPreviousTime = time;
