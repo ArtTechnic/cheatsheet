@@ -32,7 +32,7 @@ html {
     top: 10px;
     width: 100vw;
     z-index: 2;
-    box-shadow: 0 8px 16px 16px Silver;
+    box-shadow: 0 8px 16px 16px rgb(0, 32, 16);
 }
 
 #header-inner {
@@ -124,10 +124,11 @@ button {
     color: Red;
     font-size: 1.17em;
     font-weight: 700;
-    left: 0;
+    left: 50%;
     pointer-events: none;
     position: absolute;
     top: calc(100% + 4px);
+    transform: translateX(-50%);
     white-space: nowrap;
     z-index: 3;
 }
@@ -186,7 +187,7 @@ button {
     bottom: 10px;
     width: 100vw;
     z-index: 2;
-    box-shadow: 0 -8px 16px 16px Silver;
+    box-shadow: 0 -8px 16px 16px rgb(0, 32, 16);
 }
 
 #footer p {
@@ -195,7 +196,7 @@ button {
 
 
 body {
-    background-color: Silver;
+    background-color: rgb(0, 32, 16);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -203,14 +204,14 @@ body {
 
 body::before,
 body::after {
-    background-color: Silver;
+    background-color: rgb(0, 32, 16);
     content: "";
     height: 10px;
     left: 0;
     pointer-events: none;
     position: fixed;
     right: 0;
-    z-index: 1;
+    z-index: 3;
 }
 
 body::before {
@@ -221,12 +222,31 @@ body::after {
     bottom: 0;
 }
 
+#matrix-background {
+    left: 50%;
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-3deg);
+    z-index: 0;
+}
+
+#matrix-edge-fade {
+    background: linear-gradient(to right, Black 0, transparent 25%, transparent 75%, Black 100%);
+    inset: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 0;
+}
+
 .main {
     align-items: flex-start;
     display: flex;
     flex: 1;
     justify-content: center;
+    position: relative;
     width: 100vw;
+    z-index: 1;
 }
 
 .section {
@@ -437,6 +457,14 @@ body:has(.table tr:target) .main-panel::after {
 .detail-page .main-panel p + p,
 .detail-page .main-panel .detail-example + p {
     margin-top: 10px;
+}
+
+.detail-page a[href^="https://developer.mozilla.org"] {
+    cursor: pointer;
+}
+
+.detail-page a[href^="https://developer.mozilla.org"]:hover {
+    text-shadow: 0 0 8px White;
 }
 
 .detail-code {
