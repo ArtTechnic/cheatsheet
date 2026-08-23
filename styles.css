@@ -3,6 +3,10 @@ html {
     overflow-x: clip;
 }
 
+html.return-pending {
+    visibility: hidden;
+}
+
 /* AAAARGH I HATE DEFAULT VALUES!!! THEY EXIST UNTIL OVERWRITTEN, SO..... */
 * {
     quotes: "'" "'";
