@@ -34,6 +34,30 @@ const createMatrixValue = () => {
     return matrixCharacters[Math.floor(Math.random() * matrixCharacters.length)];
 };
 
+const applyMatrixTransform = () => {
+    const scale = 1 / matrixPixelSize;
+    const rotation = -matrixRotationAngle;
+    const cosine = Math.cos(rotation);
+    const sine = Math.sin(rotation);
+    const centreX = matrixCanvasWidth / 2;
+    const centreY = matrixCanvasHeight / 2;
+
+    matrixContext.setTransform(
+        cosine * scale,
+        sine * scale,
+        -sine * scale,
+        cosine * scale,
+        (centreX - cosine * centreX + sine * centreY) * scale,
+        (centreY - sine * centreX - cosine * centreY) * scale
+    );
+};
+
+const clearMatrixCanvas = () => {
+    matrixContext.setTransform(1, 0, 0, 1, 0, 0);
+    matrixContext.clearRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+    applyMatrixTransform();
+};
+
 const resizeMatrix = () => {
     const rotation = matrixRotationAngle;
     const cosine = Math.cos(rotation);
@@ -51,15 +75,7 @@ const resizeMatrix = () => {
     matrixCanvas.style.width = `${matrixCanvasWidth}px`;
     matrixCanvas.style.height = `${matrixCanvasHeight}px`;
     matrixContext.imageSmoothingEnabled = false;
-    matrixContext.setTransform(
-        1 / matrixPixelSize,
-        0,
-        0,
-        1 / matrixPixelSize,
-        0,
-        0
-    );
-    matrixContext.clearRect(0, 0, matrixCanvasWidth, matrixCanvasHeight);
+    clearMatrixCanvas();
     matrixGridOffsetX = 0;
     matrixGridOffsetY = 0;
     matrixGridOriginColumn = 0;
@@ -148,7 +164,7 @@ const restoreMatrixState = () => {
 
 const drawMatrix = (time) => {
     if (time - matrixPreviousTime >= 40) {
-        matrixContext.clearRect(0, 0, matrixCanvasWidth, matrixCanvasHeight);
+        clearMatrixCanvas();
 
         matrixGridOffsetX -= matrixPixelSize;
 
