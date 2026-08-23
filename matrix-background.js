@@ -9,6 +9,7 @@ document.body.appendChild(matrixEdgeFade);
 const matrixCharacters = "0123456789ABCDEF";
 const matrixSubCellSize = 24;
 const matrixCellSize = 16;
+const matrixMobileFontSize = 14;
 const matrixStreamSpeed = 0.48;
 const matrixRotationAngle = 5 * (Math.PI / 180);
 const matrixScrollRate = 2;
@@ -105,7 +106,11 @@ const drawMatrix = (time) => {
             matrixGridOriginRow = (matrixGridOriginRow - 1 + matrixRowCount) % matrixRowCount;
         }
 
-        matrixContext.font = `bold ${matrixSubCellSize - 2}px monospace`;
+        const matrixFontSize = window.innerWidth <= 600
+            ? matrixMobileFontSize
+            : matrixSubCellSize - 2;
+
+        matrixContext.font = `bold ${matrixFontSize}px monospace`;
         matrixContext.textBaseline = "top";
         const trailCells = new Map();
 
