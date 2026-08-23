@@ -1,9 +1,13 @@
-const initialReturnRow = document.querySelector("tr:target");
+const returnRowId = window.location.hash.startsWith("#row-details-")
+    ? decodeURIComponent(window.location.hash.slice(1))
+    : "";
+const initialReturnRow = returnRowId ? document.getElementById(returnRowId) : null;
 
 document.activeElement?.blur();
 
 if (initialReturnRow) {
     initialReturnRow.scrollIntoView({ block: "center", inline: "nearest" });
+    document.documentElement.classList.add("return-positioned");
 }
 
 window.addEventListener("pageshow", () => {
@@ -63,10 +67,10 @@ document.addEventListener("pointerleave", () => {
 });
 
 if (!rowPointerHighlightEnabled) {
-    window.setTimeout(() => {
+    document.querySelector(".main-panel").addEventListener("animationend", () => {
         rowPointerHighlightEnabled = true;
         requestRowHighlightUpdate();
-    }, 500);
+    }, { once: true });
 }
 
 searchRows.forEach((row) => {

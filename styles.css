@@ -347,6 +347,13 @@ body::after {
     height: 50vh;
 }
 
+html:not(.return-positioned) .index-page:has(.table tbody tr:target) .main-panel,
+html:not(.return-positioned) .index-page:has(.table tbody tr:target) .section,
+html:not(.return-positioned) .index-page:has(.table tbody tr:target) .table,
+html:not(.return-positioned) .index-page:has(.table tbody tr:target) .table * {
+    animation-play-state: paused;
+}
+
 .index-page #about > *,
 .index-page .cheat-sheet h2,
 .index-page .cheat-sheet h3,
