@@ -473,6 +473,7 @@ body::after {
 .detail-code {
     background-color: DimGray;
     border: 1px solid black;
+    margin-bottom: 16px;
     margin-top: 16px;
     padding: 8px;
     color: WhiteSmoke;
