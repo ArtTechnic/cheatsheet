@@ -11,6 +11,12 @@ html.index-ready .index-page {
     visibility: visible;
 }
 
+@property --table-grid-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: transparent;
+}
+
 /* AAAARGH I HATE DEFAULT VALUES!!! THEY EXIST UNTIL OVERWRITTEN, SO..... */
 * {
     quotes: "'" "'";
@@ -293,7 +299,8 @@ body::after {
 
 /* */
 .table {
-    border: 1px solid LightGray;
+    --table-grid-color: LightGray;
+    border: 1px solid var(--table-grid-color);
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 12px;
@@ -315,7 +322,7 @@ body::after {
 .table td {
     font-size: 11px;
     padding: 8px;
-    border-right: 1px solid LightGray; /* vertical lines between columns */
+    border-right: 1px solid var(--table-grid-color); /* vertical lines between columns */
     text-align: left;
     vertical-align: top;
     overflow-wrap: anywhere;
@@ -333,7 +340,7 @@ body::after {
 }
 
 .table tr {
-    border-bottom: 1px solid LightGray; /* horizontal line spans full row width */
+    border-bottom: 1px solid var(--table-grid-color); /* horizontal line spans full row width */
 }
 
 .table tbody tr:last-child {
@@ -370,25 +377,11 @@ html:not(.index-ready) .index-page .table * {
 }
 
 .index-page .table tbody tr:not(:target):not(.return-target) {
-    animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
-}
-
-.index-page .table tbody tr:target,
-.index-page .table tbody tr.return-target {
-    animation: index-grid-fade-in 500ms ease-out both;
+    animation: index-fade-in 500ms ease-out both;
 }
 
 .index-page .table thead th {
-    animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
-}
-
-.index-page .table tbody tr:not(:target):not(.return-target) td {
-    animation: index-grid-fade-in 500ms ease-out both;
-}
-
-.index-page .table tbody tr:target td,
-.index-page .table tbody tr.return-target td {
-    animation: index-grid-fade-in 500ms ease-out both;
+    animation: index-fade-in 500ms ease-out both;
 }
 
 .index-page .main-panel,
@@ -397,15 +390,19 @@ html:not(.index-ready) .index-page .table * {
     animation: index-surface-fade-in 500ms ease-out both;
 }
 
+.index-page .table {
+    animation: index-surface-fade-in 500ms ease-out both, index-table-grid-fade-in 500ms ease-out both;
+}
+
 @keyframes index-fade-in {
     from {
         opacity: 0;
     }
 }
 
-@keyframes index-grid-fade-in {
+@keyframes index-table-grid-fade-in {
     from {
-        border-color: transparent;
+        --table-grid-color: transparent;
     }
 }
 
@@ -418,8 +415,9 @@ html:not(.index-ready) .index-page .table * {
 }
 
 
+
 .table thead th {
-    border-bottom: 2px solid LightGray; /* stronger rule under header */
+    border-bottom: 2px solid var(--table-grid-color); /* stronger rule under header */
     border-right: none;
     background: WhiteSmoke;
     font-size: 14px;
