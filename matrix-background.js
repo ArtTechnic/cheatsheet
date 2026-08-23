@@ -167,6 +167,7 @@ const drawMatrix = (time) => {
         clearMatrixCanvas();
 
         matrixGridOffsetX -= matrixPixelSize;
+        matrixGridOffsetY -= matrixPixelSize * Math.tan(matrixRotationAngle);
 
         if (matrixGridOffsetX <= -matrixCellSize) {
             matrixGridOffsetX += matrixCellSize;
