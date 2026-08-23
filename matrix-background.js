@@ -18,6 +18,7 @@ const matrixScrollY = 0;
 const matrixTrailLength = 16;
 const matrixTrailShades = 8;
 const matrixBaseShade = 1;
+const matrixStateStorageKey = "cheatsheet-matrix-state";
 let matrixStreams = [];
 let matrixBaseGrid = [];
 let matrixBaseBrightness = [];
@@ -87,6 +88,53 @@ const resizeMatrix = () => {
     }));
 
     matrixStreams = [...verticalStreams, ...horizontalStreams];
+};
+
+const saveMatrixState = () => {
+    const state = {
+        version: 1,
+        viewportWidth: window.innerWidth,
+        viewportHeight: window.innerHeight,
+        columnCount: matrixColumnCount,
+        rowCount: matrixRowCount,
+        baseGrid: matrixBaseGrid,
+        baseBrightness: matrixBaseBrightness,
+        streams: matrixStreams,
+        gridOffsetX: matrixGridOffsetX,
+        gridOffsetY: matrixGridOffsetY,
+        gridOriginColumn: matrixGridOriginColumn,
+        gridOriginRow: matrixGridOriginRow
+    };
+
+    try {
+        sessionStorage.setItem(matrixStateStorageKey, JSON.stringify(state));
+    } catch {
+        // The background still works normally if browser storage is unavailable.
+    }
+};
+
+const restoreMatrixState = () => {
+    try {
+        const state = JSON.parse(sessionStorage.getItem(matrixStateStorageKey));
+        const matchesViewport = state?.viewportWidth === window.innerWidth
+            && state?.viewportHeight === window.innerHeight;
+        const matchesGrid = state?.columnCount === matrixColumnCount
+            && state?.rowCount === matrixRowCount;
+
+        if (state?.version !== 1 || !matchesViewport || !matchesGrid) {
+            return;
+        }
+
+        matrixBaseGrid = state.baseGrid;
+        matrixBaseBrightness = state.baseBrightness;
+        matrixStreams = state.streams;
+        matrixGridOffsetX = state.gridOffsetX;
+        matrixGridOffsetY = state.gridOffsetY;
+        matrixGridOriginColumn = state.gridOriginColumn;
+        matrixGridOriginRow = state.gridOriginRow;
+    } catch {
+        // Ignore incomplete state and use the freshly generated background.
+    }
 };
 
 const drawMatrix = (time) => {
@@ -261,4 +309,12 @@ const drawMatrix = (time) => {
 
 resizeMatrix();
 window.addEventListener("resize", resizeMatrix);
-requestAnimationFrame(drawMatrix);
+restoreMatrixState();
+window.addEventListener("pagehide", saveMatrixState);
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+        restoreMatrixState();
+    }
+});
+matrixPreviousTime = performance.now() - 40;
+drawMatrix(performance.now());
