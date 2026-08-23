@@ -1,4 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+const initialReturnRow = document.querySelector("tr:target");
+
+if (initialReturnRow) {
+    initialReturnRow.scrollIntoView({ block: "center", inline: "nearest" });
+}
+
 const searchForm = document.querySelector("#header-search");
 const searchInput = searchForm.querySelector("input");
 const searchError = document.querySelector("#search-error");
@@ -10,8 +15,16 @@ let highlightedRow;
 let pointerX = -1;
 let pointerY = -1;
 let rowHighlightFrame;
+let rowPointerHighlightEnabled = !document.querySelector("tr:target");
 
 const updateRowHighlight = () => {
+    if (!rowPointerHighlightEnabled) {
+        highlightedRow?.classList.remove("is-pointer-hovered");
+        highlightedRow = undefined;
+        rowHighlightFrame = undefined;
+        return;
+    }
+
     const rowUnderPointer = document.elementFromPoint(pointerX, pointerY)?.closest("tr.clickable-row");
 
     if (rowUnderPointer !== highlightedRow) {
@@ -42,6 +55,13 @@ document.addEventListener("pointerleave", () => {
     pointerY = -1;
     requestRowHighlightUpdate();
 });
+
+if (!rowPointerHighlightEnabled) {
+    window.setTimeout(() => {
+        rowPointerHighlightEnabled = true;
+        requestRowHighlightUpdate();
+    }, 500);
+}
 
 searchRows.forEach((row) => {
     row.addEventListener("click", () => {
@@ -124,5 +144,4 @@ document.addEventListener("click", (event) => {
         hideSearchSuggestions();
         searchInput.blur();
     }
-});
 });
