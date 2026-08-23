@@ -3,8 +3,12 @@ html {
     overflow-x: clip;
 }
 
-html.return-pending {
+.index-page {
     visibility: hidden;
+}
+
+html.index-ready .index-page {
+    visibility: visible;
 }
 
 /* AAAARGH I HATE DEFAULT VALUES!!! THEY EXIST UNTIL OVERWRITTEN, SO..... */
@@ -351,10 +355,10 @@ body::after {
     height: 50vh;
 }
 
-html:not(.return-positioned) .index-page:has(.table tbody tr:target) .main-panel,
-html:not(.return-positioned) .index-page:has(.table tbody tr:target) .section,
-html:not(.return-positioned) .index-page:has(.table tbody tr:target) .table,
-html:not(.return-positioned) .index-page:has(.table tbody tr:target) .table * {
+html:not(.index-ready) .index-page .main-panel,
+html:not(.index-ready) .index-page .section,
+html:not(.index-ready) .index-page .table,
+html:not(.index-ready) .index-page .table * {
     animation-play-state: paused;
 }
 
@@ -369,11 +373,21 @@ html:not(.return-positioned) .index-page:has(.table tbody tr:target) .table * {
     animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
 }
 
+.index-page .table tbody tr:target,
+.index-page .table tbody tr.return-target {
+    animation: index-grid-fade-in 500ms ease-out both;
+}
+
 .index-page .table thead th {
     animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
 }
 
 .index-page .table tbody tr:not(:target):not(.return-target) td {
+    animation: index-grid-fade-in 500ms ease-out both;
+}
+
+.index-page .table tbody tr:target td,
+.index-page .table tbody tr.return-target td {
     animation: index-grid-fade-in 500ms ease-out both;
 }
 
@@ -402,6 +416,7 @@ html:not(.return-positioned) .index-page:has(.table tbody tr:target) .table * {
         box-shadow: none;
     }
 }
+
 
 .table thead th {
     border-bottom: 2px solid LightGray; /* stronger rule under header */

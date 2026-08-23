@@ -2,20 +2,24 @@ const returnRowId = window.location.hash.startsWith("#row-details-")
     ? decodeURIComponent(window.location.hash.slice(1))
     : "";
 
-if (returnRowId) {
-    document.documentElement.classList.add("return-pending");
-}
-
 document.addEventListener("DOMContentLoaded", () => {
 const initialReturnRow = returnRowId ? document.getElementById(returnRowId) : null;
 
 if (initialReturnRow) {
     initialReturnRow.scrollIntoView({ block: "center", inline: "nearest" });
-    document.documentElement.classList.add("return-positioned");
+    void document.documentElement.offsetHeight;
+    window.requestAnimationFrame(() => {
+        document.documentElement.classList.add("return-positioned");
+        document.documentElement.classList.add("index-ready");
+    });
+} else {
+    void document.documentElement.offsetHeight;
+    window.requestAnimationFrame(() => {
+        document.documentElement.classList.add("index-ready");
+    });
 }
 
 document.activeElement?.blur();
-document.documentElement.classList.remove("return-pending");
 
 window.addEventListener("pageshow", () => {
     document.activeElement?.blur();
