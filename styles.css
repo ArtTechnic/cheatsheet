@@ -78,17 +78,17 @@ html {
 #header-search input:focus {
     animation: search-focus-pulse 0.25s ease-in-out infinite alternate;
     border-color: White;
-    box-shadow: 0 0 8px White;
+    box-shadow: 0 0 8px Black;
     outline: none;
 }
 
 @keyframes search-focus-pulse {
     from {
-        box-shadow: 0 0 8px White;
+        box-shadow: 0 0 8px Black;
     }
 
     to {
-        box-shadow: 0 0 16px 3px White;
+        box-shadow: 0 0 16px 3px Black;
     }
 }
 
@@ -152,7 +152,7 @@ button {
     background-color: WhiteSmoke;
     border: 1px solid DimGray;
     border-radius: 6px;
-    box-shadow: 0 0 4px 4px Silver;
+    box-shadow: 0 0 4px 4px Black;
     left: 0;
     overflow: hidden;
     position: absolute;
@@ -290,7 +290,7 @@ body::after {
     overflow: hidden;
     margin-bottom: 12px;
     background-color: WhiteSmoke;
-    box-shadow: 0 4px 8px DimGray;
+    box-shadow: 0 4px 8px Black;
 }
 
 .cheat-sheet .table {
@@ -433,7 +433,7 @@ body::after {
     max-width: 1040px;
     min-width: 0;
     margin: 40px 20px 20px;
-    box-shadow: 0 8px 20px DimGray;
+    box-shadow: 0 8px 20px Black;
     border-radius: 6px;
 }
 
@@ -466,7 +466,7 @@ body::after {
 }
 
 .detail-page a[href^="https://developer.mozilla.org"]:hover {
-    text-shadow: 0 0 8px White;
+    text-shadow: 0 0 8px Black;
 }
 
 .detail-code {
