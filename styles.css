@@ -331,17 +331,8 @@ body::after {
     border-bottom: none;
 }
 
-.table tr[id] {
-    scroll-margin-block-start: calc(50vh - 16px);
-}
-
-body:has(.table tr:target) .main-panel::after {
-    content: "";
-    display: block;
-    height: 50vh;
-}
-
-.index-page .table tbody tr:target > * {
+.index-page .table tbody tr:target > *,
+.index-page .table tbody tr.return-target > * {
     background-color: WhiteSmoke;
 }
 
@@ -353,12 +344,12 @@ body:has(.table tr:target) .main-panel::after {
     animation: index-fade-in 500ms ease-out both;
 }
 
-.index-page .table tbody tr:not(:target) {
+.index-page .table tbody tr:not(:target):not(.return-target) {
     animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
 }
 
 .index-page .table thead th,
-.index-page .table tbody tr:not(:target) td {
+.index-page .table tbody tr:not(:target):not(.return-target) td {
     animation: index-grid-fade-in 500ms ease-out both;
 }
 
