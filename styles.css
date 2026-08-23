@@ -234,6 +234,7 @@ body::after {
 }
 
 #matrix-background {
+    image-rendering: pixelated;
     left: 50%;
     pointer-events: none;
     position: fixed;

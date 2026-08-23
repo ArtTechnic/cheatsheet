@@ -7,6 +7,7 @@ matrixEdgeFade.setAttribute("aria-hidden", "true");
 document.body.appendChild(matrixEdgeFade);
 
 const matrixCharacters = "0123456789ABCDEF";
+const matrixPixelSize = 4;
 const matrixSubCellSize = 24;
 const matrixCellSize = 16;
 const matrixMobileFontSize = 14;
@@ -37,19 +38,30 @@ const createMatrixValue = () => {
 };
 
 const resizeMatrix = () => {
-    const pixelRatio = Math.min(window.devicePixelRatio, 2);
     const rotation = matrixRotationAngle;
     const cosine = Math.cos(rotation);
     const sine = Math.sin(rotation);
 
-    matrixCanvasWidth = Math.ceil(window.innerWidth * cosine + window.innerHeight * sine);
-    matrixCanvasHeight = Math.ceil(window.innerWidth * sine + window.innerHeight * cosine);
+    matrixCanvasWidth = Math.ceil(
+        (window.innerWidth * cosine + window.innerHeight * sine) / matrixPixelSize
+    ) * matrixPixelSize;
+    matrixCanvasHeight = Math.ceil(
+        (window.innerWidth * sine + window.innerHeight * cosine) / matrixPixelSize
+    ) * matrixPixelSize;
 
-    matrixCanvas.width = matrixCanvasWidth * pixelRatio;
-    matrixCanvas.height = matrixCanvasHeight * pixelRatio;
+    matrixCanvas.width = matrixCanvasWidth / matrixPixelSize;
+    matrixCanvas.height = matrixCanvasHeight / matrixPixelSize;
     matrixCanvas.style.width = `${matrixCanvasWidth}px`;
     matrixCanvas.style.height = `${matrixCanvasHeight}px`;
-    matrixContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    matrixContext.imageSmoothingEnabled = false;
+    matrixContext.setTransform(
+        1 / matrixPixelSize,
+        0,
+        0,
+        1 / matrixPixelSize,
+        0,
+        0
+    );
     matrixContext.clearRect(0, 0, matrixCanvasWidth, matrixCanvasHeight);
     matrixGridOffsetX = 0;
     matrixGridOffsetY = 0;
