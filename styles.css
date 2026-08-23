@@ -227,7 +227,7 @@ body::after {
     pointer-events: none;
     position: fixed;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(-5deg);
     z-index: 0;
 }
 
