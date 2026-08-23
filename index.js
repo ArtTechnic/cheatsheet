@@ -1,10 +1,8 @@
-const returnRowId = new URLSearchParams(window.location.search).get("return");
-
-if (returnRowId?.startsWith("row-details-")) {
-    window.cheatSheetReturnRowId = returnRowId;
+if (window.location.hash.startsWith("#row-details-")) {
+    window.cheatSheetReturnRowId = window.location.hash.slice(1);
     document.documentElement.classList.add("return-position-pending");
     history.scrollRestoration = "manual";
-    history.replaceState(history.state, "", window.location.pathname);
+    history.replaceState(history.state, "", `${window.location.pathname}${window.location.search}`);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
