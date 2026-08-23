@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Animation Composition Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-animation-composition" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>animation-composition</h2>
+                    <p>The <i>animation-composition</i> property controls <strong>how animation handles conflicting animatable properties</strong>. It helps decide where an element sits and how it relates to nearby boxes.</p>
+                    <p>Different values give <i>animation-composition</i> different instructions. Try them one at a time, and remember that positioning properties work as a team, so inspect the containing box as well as the element itself.</p>
+                    
+                    <p>This short sample shows <i>animation-composition</i> in use:</p>
+                    <pre class="detail-code"><code>/* Single animation */
+animation-composition: replace;
+animation-composition: add;
+animation-composition: accumulate;
+
+/* Multiple animations */
+animation-composition: replace, add;
+animation-composition: add, accumulate;
+animation-composition: replace, add, accumulate;
+
+/* Global values */
+animation-composition: inherit;
+animation-composition: initial;
+animation-composition: revert;
+animation-composition: revert-layer;
+animation-composition: unset;</code></pre>
+                    <p><strong>What this example does:</strong> This declaration gives <i>animation-composition</i> the value <code>replace</code>. Replace that value with another valid choice to compare the two results.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-composition" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Corner Block End Shape Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-corner-block-end-shape" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>corner-block-end-shape</h2>
+                    <p>With <i>corner-block-end-shape</i>, you can control <strong>shape of end corner on block axis</strong>. It changes one particular part of the browser’s styling calculation.</p>
+                    <p>Add <i>corner-block-end-shape</i> inside a CSS rule and follow it with a colon and value. A helpful beginner check is this: Change only this property while practising, then compare the before and after result.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Here is a <i>corner-block-end-shape</i> example to try in a practice page:</p>
+                    <pre class="detail-code"><code>/* Single keyword value set for both corners */
+corner-block-end-shape: square;
+corner-block-end-shape: scoop;
+
+/* Single superellipse() value set for both corners */
+corner-block-end-shape: superellipse(3.5);
+corner-block-end-shape: superellipse(-1.9);
+
+/* Block-end/inline-start corner, block-end/inline-end corner */
+corner-block-end-shape: square scoop;
+corner-block-end-shape: square superellipse(-1.9);
+
+/* Global values */
+corner-block-end-shape: inherit;
+corner-block-end-shape: initial;
+corner-block-end-shape: revert;
+corner-block-end-shape: revert-layer;
+corner-block-end-shape: unset;</code></pre>
+                    <p><strong>What this example does:</strong> Read the line as ‘set <i>corner-block-end-shape</i> to <code>square</code>.’ That value is the instruction controlling what you see.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-block-end-shape" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

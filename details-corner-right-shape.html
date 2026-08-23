@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Corner Right Shape Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-corner-right-shape" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>corner-right-shape</h2>
+                    <p>Think of <i>corner-right-shape</i> as the control for <strong>shape of right edge corners</strong>. It helps decide where an element sits and how it relates to nearby boxes.</p>
+                    <p>Place a colon after <code>corner-right-shape</code>, then supply the value you want. When testing this property, remember: positioning properties work as a team, so inspect the containing box as well as the element itself.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Try the following <i>corner-right-shape</i> code in a spare practice file:</p>
+                    <pre class="detail-code"><code>/* Single keyword value set for both corners */
+corner-right-shape: bevel;
+corner-right-shape: notch;
+
+/* Single superellipse() value set for both corners */
+corner-right-shape: superellipse(4);
+corner-right-shape: superellipse(-0.9);
+
+/* Top corner, bottom corner */
+corner-right-shape: bevel notch;
+corner-right-shape: notch superellipse(-0.9);
+
+/* Global values */
+corner-right-shape: inherit;
+corner-right-shape: initial;
+corner-right-shape: revert;
+corner-right-shape: revert-layer;
+corner-right-shape: unset;</code></pre>
+                    <p><strong>What to notice:</strong> Here, <code>bevel</code> is the value attached to <i>corner-right-shape</i>. Change it, refresh the page, and compare the new result with the original.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-right-shape" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Corner Inline End Shape Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-corner-inline-end-shape" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>corner-inline-end-shape</h2>
+                    <p>With <i>corner-inline-end-shape</i>, you can control <strong>shape of end corner on inline axis</strong>. It changes the presentation or flow of writing.</p>
+                    <p>Place a colon after <code>corner-inline-end-shape</code>, then supply the value you want. When testing this property, remember: test several lines, long words, and zoomed text—a single short sentence can hide problems.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Here is a compact <i>corner-inline-end-shape</i> example you can inspect and alter:</p>
+                    <pre class="detail-code"><code>/* Single keyword value set for both corners */
+corner-inline-end-shape: squircle;
+corner-inline-end-shape: scoop;
+
+/* Single superellipse() value set for both corners */
+corner-inline-end-shape: superellipse(1.5);
+corner-inline-end-shape: superellipse(-0.8);
+
+/* Block-start/inline-end corner, block-end/inline-end corner */
+corner-inline-end-shape: squircle scoop;
+corner-inline-end-shape: squircle superellipse(-0.8);
+
+/* Global values */
+corner-inline-end-shape: inherit;
+corner-inline-end-shape: initial;
+corner-inline-end-shape: revert;
+corner-inline-end-shape: revert-layer;
+corner-inline-end-shape: unset;</code></pre>
+                    <p><strong>What this example does:</strong> The colon separates <i>corner-inline-end-shape</i> from its chosen value, <code>squircle</code>. The semicolon marks the end of this declaration.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-inline-end-shape" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

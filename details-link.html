@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Link Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-link" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>link</h2>
+                    <p>Use <i>link</i> when a piece of HTML represents <strong>external resource link</strong>. Think of it as a signpost: part of the code says where something is, and the browser uses that address to reach it.</p>
+                    <p>Do not add a separate closing tag for <i>link</i>. It is a <strong>void element</strong>, with its information supplied through attributes. Check the address carefully. A small spelling mistake can point to a missing page or resource.</p>
+                    
+                    <p>Use this <i>link</i> sample as a starting point, then change one piece at a time:</p>
+                    <pre class="detail-code"><code>&lt;link href=&quot;https://mdn.github.iohttps://mdn.github.iohttps://mdn.github.io/shared-assets/misc/link-element-example.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+&lt;p&gt;This text will be red as defined in the external stylesheet.&lt;/p&gt;
+&lt;p style=&quot;color: blue&quot;&gt;
+  The &lt;code&gt;style&lt;/code&gt; attribute can override it, though.
+&lt;/p&gt;</code></pre>
+                    <p><strong>How this sample works:</strong> The key piece in this sample is <code>&lt;link&gt;</code>. Read outward from that tag to see what belongs to it and how it is configured.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

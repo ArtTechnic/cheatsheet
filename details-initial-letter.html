@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Initial Letter Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-initial-letter" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>initial-letter</h2>
+                    <p>Use <i>initial-letter</i> when you need to change <strong>drop cap for first letter</strong>. It changes the presentation or flow of writing.</p>
+                    <p>Add <i>initial-letter</i> inside a CSS rule and follow it with a colon and value. A helpful beginner check is this: Test several lines, long words, and zoomed text—a single short sentence can hide problems.</p>
+                    
+                    <p>A small <i>initial-letter</i> example looks like this:</p>
+                    <pre class="detail-code"><code>/* Keyword values */
+initial-letter: normal;
+
+/* One value */
+initial-letter: 3; /* 3 lines tall, baseline at line 3 */
+initial-letter: 1.5; /* 1.5 lines tall, baseline at line 2 */
+
+/* Two values */
+initial-letter: 3 2; /* 3 lines tall, baseline at line 2 (raised 1 line) */
+initial-letter: 3 1; /* 3 lines tall, baseline unchanged (raised 2 lines) */
+
+/* Global values */
+initial-letter: inherit;
+initial-letter: initial;
+initial-letter: revert;
+initial-letter: revert-layer;
+initial-letter: unset;</code></pre>
+                    <p><strong>The important part:</strong> The colon separates <i>initial-letter</i> from its chosen value, <code>normal</code>. The semicolon marks the end of this declaration.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/initial-letter" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

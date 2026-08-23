@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Corner Left Shape Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-corner-left-shape" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>corner-left-shape</h2>
+                    <p>Think of <i>corner-left-shape</i> as the control for <strong>shape of left edge corners</strong>. It helps decide where an element sits and how it relates to nearby boxes.</p>
+                    <p>A rule using <i>corner-left-shape</i> needs a value after the colon. One useful test is to change only that value; positioning properties work as a team, so inspect the containing box as well as the element itself.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Here is a compact <i>corner-left-shape</i> example you can inspect and alter:</p>
+                    <pre class="detail-code"><code>/* Single keyword value set for both corners */
+corner-left-shape: round;
+corner-left-shape: bevel;
+
+/* Single superellipse() value set for both corners */
+corner-left-shape: superellipse(1.2);
+corner-left-shape: superellipse(-2.5);
+
+/* Top corner, bottom corner */
+corner-left-shape: round bevel;
+corner-left-shape: bevel superellipse(1.2);
+
+/* Global values */
+corner-left-shape: inherit;
+corner-left-shape: initial;
+corner-left-shape: revert;
+corner-left-shape: revert-layer;
+corner-left-shape: unset;</code></pre>
+                    <p><strong>Reading the example:</strong> The colon separates <i>corner-left-shape</i> from its chosen value, <code>round</code>. The semicolon marks the end of this declaration.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/corner-left-shape" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

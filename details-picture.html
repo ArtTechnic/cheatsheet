@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Picture Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-picture" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>picture</h2>
+                    <p>When you write <i>picture</i>, you are marking something as <strong>responsive image container</strong>. This tag helps place visual or audio material on the page, or supplies information that belongs with that material.</p>
+                    <p>Treat the two <i>picture</i> tags like the covers of a folder: the related content goes between them. Remember that visitors may not see or hear the media, so provide useful text alternatives or captions when the tag supports them.</p>
+                    
+                    <p>This short sample shows <i>picture</i> in use:</p>
+                    <pre class="detail-code"><code>&lt;!--Change the browser window width to see the image change.--&gt;
+
+&lt;picture&gt;
+  &lt;source
+    srcset=&quot;https://mdn.github.iohttps://mdn.github.iohttps://mdn.github.io/shared-assets/images/examples/surfer.jpg&quot;
+    media=&quot;(orientation: portrait)&quot; /&gt;
+  &lt;img src=&quot;https://mdn.github.iohttps://mdn.github.iohttps://mdn.github.io/shared-assets/images/examples/painted-hand.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/picture&gt;</code></pre>
+                    <p><strong>What to notice:</strong> The key piece in this sample is <code>&lt;picture&gt;</code>. Read outward from that tag to see what belongs to it and how it is configured.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

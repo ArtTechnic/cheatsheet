@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Input Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-input" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>input</h2>
+                    <p>Browsers read <i>input</i> as a label meaning <strong>input control</strong>. It is a form building block: forms let a visitor enter information, choose something, or start an action.</p>
+                    <p>Do not add a separate closing tag for <i>input</i>. It is a <strong>void element</strong>, with its information supplied through attributes. Every control needs a clear label, and the page should still make sense when somebody uses only a keyboard.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Try the following <i>input</i> code in a spare practice file:</p>
+                    <pre class="detail-code"><code>&lt;label for=&quot;name&quot;&gt;Name (4 to 8 characters):&lt;/label&gt;
+
+&lt;input
+  type=&quot;text&quot;
+  id=&quot;name&quot;
+  name=&quot;name&quot;
+  required
+  minlength=&quot;4&quot;
+  maxlength=&quot;8&quot;
+  size=&quot;10&quot; /&gt;</code></pre>
+                    <p><strong>How this sample works:</strong> The key piece in this sample is <code>&lt;input&gt;</code>. Read outward from that tag to see what belongs to it and how it is configured.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

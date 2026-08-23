@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>User Modify Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-user-modify" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>user-modify</h2>
+                    <p>Changing <i>user-modify</i> changes <strong>whether user can modify element</strong>. It changes one particular part of the browser’s styling calculation.</p>
+                    <p>Add <i>user-modify</i> inside a CSS rule and follow it with a colon and value. A helpful beginner check is this: Change only this property while practising, then compare the before and after result.</p>
+                    <p><strong>Important:</strong> This is an older feature. You may meet it in old websites, but you should normally choose a modern alternative for new work.</p>
+                    <p>This short sample shows <i>user-modify</i> in use:</p>
+                    <pre class="detail-code"><code>/* Keyword values */
+user-modify: read-only;
+user-modify: read-write;
+user-modify: write-only;
+
+/* Global values */
+user-modify: inherit;
+user-modify: initial;
+user-modify: revert;
+user-modify: unset;</code></pre>
+                    <p><strong>Reading the example:</strong> The sample asks the browser to use <code>read-only</code> for <i>user-modify</i>. The property stays the same when you experiment; the value is the part to change.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/user-modify" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

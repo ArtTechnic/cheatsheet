@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Mask Clip Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-mask-clip" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>mask-clip</h2>
+                    <p>The <i>mask-clip</i> property controls <strong>clip box of mask</strong>. It helps decide whether a box is shown and what happens when its contents do not fit normally.</p>
+                    <p>CSS reads this as the name <code>mask-clip</code>, a colon, and then a value. As you compare values, hidden or clipped content may become impossible to reach, so test with more content than you expect.</p>
+                    
+                    <p>A small <i>mask-clip</i> example looks like this:</p>
+                    <pre class="detail-code"><code>/* &lt;coord-box&gt; values */
+mask-clip: content-box;
+mask-clip: padding-box;
+mask-clip: border-box;
+mask-clip: fill-box;
+mask-clip: stroke-box;
+mask-clip: view-box;
+
+/* Keyword values */
+mask-clip: no-clip;
+
+/* Multiple values */
+mask-clip: padding-box, no-clip;
+mask-clip: view-box, fill-box, border-box;
+
+/* Global values */
+mask-clip: inherit;
+mask-clip: initial;
+mask-clip: revert;
+mask-clip: revert-layer;
+mask-clip: unset;</code></pre>
+                    <p><strong>Reading the example:</strong> In this case <i>mask-clip</i> receives <code>content-box</code>. Trying a contrasting valid value makes the difference easier to spot.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-clip" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Mask Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-mask" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>mask</h2>
+                    <p>In CSS, <i>mask</i> is the setting for <strong>shorthand for mask properties</strong>. It changes one particular part of the browser’s styling calculation.</p>
+                    <p>The value written after <code>mask:</code> chooses the result. While experimenting, keep in mind that change only this property while practising, then compare the before and after result.</p>
+                    
+                    <p>Use this <i>mask</i> sample as a starting point, then change one piece at a time:</p>
+                    <pre class="detail-code"><code>/* Keyword values */
+mask: none;
+
+/* Image values */
+mask: url(&quot;mask.png&quot;); /* Raster image used as mask */
+mask: url(&quot;masks.svg#star&quot;); /* SVG used as mask */
+
+/* Combined values */
+mask: url(&quot;masks.svg#star&quot;) luminance; /* Luminance mask */
+mask: url(&quot;masks.svg#star&quot;) 40px 20px; /* Mask positioned 40px from the top and 20px from the left */
+mask: url(&quot;masks.svg#star&quot;) 0 0/50px 50px; /* Mask with a width and height of 50px */
+mask: url(&quot;masks.svg#star&quot;) repeat-x; /* Horizontally-repeated mask */
+mask: url(&quot;masks.svg#star&quot;) stroke-box; /* Mask extends to the inside edge of the stroke box */
+mask: url(&quot;masks.svg#star&quot;) exclude; /* Mask combined with background using non-overlapping parts */
+
+/* Multiple masks */
+mask:
+  url(&quot;masks.svg#star&quot;) left / 16px repeat-y,
+  /* 16px-wide mask on the left side */ url(&quot;masks.svg#circle&quot;) right / 16px
+    repeat-y; /* 16px-wide mask against right side */
+
+/* Global values */
+mask: inherit;
+mask: initial;
+mask: revert;
+mask: revert-layer;
+mask: unset;</code></pre>
+                    <p><strong>How this sample works:</strong> In this case <i>mask</i> receives <code>none</code>. Trying a contrasting valid value makes the difference easier to spot.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

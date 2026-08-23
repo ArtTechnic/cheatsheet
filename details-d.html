@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>D Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-d" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>d</h2>
+                    <p>Use <i>d</i> when you need to change <strong>path data for SVG</strong>. It changes one particular part of the browser’s styling calculation.</p>
+                    <p>A rule using <i>d</i> needs a value after the colon. One useful test is to change only that value; change only this property while practising, then compare the before and after result.</p>
+                    
+                    <p>Here is a compact <i>d</i> example you can inspect and alter:</p>
+                    <pre class="detail-code"><code>/* Default */
+d: none;
+
+/* Basic usage */
+d: path(&quot;m 5,5 h 35 L 20,30 z&quot;);
+d: path(&quot;M 0,25 l 50,150 l 200,50 z&quot;);
+d: path(&quot;M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z&quot;);
+
+/* Global values */
+d: inherit;
+d: initial;
+d: revert;
+d: revert-layer;
+d: unset;</code></pre>
+                    <p><strong>Reading the example:</strong> The important instruction in the sample is <code>none</code>. It is assigned to <i>d</i> and changes only the part described above.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/d" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Area Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-area" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>area</h2>
+                    <p>Browsers read <i>area</i> as a label meaning <strong>hotspot in image map</strong>. This tag helps place visual or audio material on the page, or supplies information that belongs with that material.</p>
+                    <p>Do not add a separate closing tag for <i>area</i>. It is a <strong>void element</strong>, with its information supplied through attributes. Remember that visitors may not see or hear the media, so provide useful text alternatives or captions when the tag supports them.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Use this <i>area</i> sample as a starting point, then change one piece at a time:</p>
+                    <pre class="detail-code"><code>&lt;map name=&quot;infographic&quot;&gt;
+  &lt;area
+    shape=&quot;poly&quot;
+    coords=&quot;129,0,260,95,129,138&quot;
+    href=&quot;https://developer.mozilla.org/docs/Web/HTTP&quot;
+    alt=&quot;HTTP&quot; /&gt;
+  &lt;area
+    shape=&quot;poly&quot;
+    coords=&quot;260,96,209,249,130,138&quot;
+    href=&quot;https://developer.mozilla.org/docs/Web/HTML&quot;
+    alt=&quot;HTML&quot; /&gt;
+  &lt;area
+    shape=&quot;poly&quot;
+    coords=&quot;209,249,49,249,130,139&quot;
+    href=&quot;https://developer.mozilla.org/docs/Web/JavaScript&quot;
+    alt=&quot;JavaScript&quot; /&gt;
+  &lt;area
+    shape=&quot;poly&quot;
+    coords=&quot;48,249,0,96,129,138&quot;
+    href=&quot;https://developer.mozilla.org/docs/Web/API&quot;
+    alt=&quot;Web APIs&quot; /&gt;
+  &lt;area
+    shape=&quot;poly&quot;
+    coords=&quot;0,95,128,0,128,137&quot;
+    href=&quot;https://developer.mozilla.org/docs/Web/CSS&quot;
+    alt=&quot;CSS&quot; /&gt;
+&lt;/map&gt;
+&lt;img
+&lt;!-- More lines are shown on MDN. --&gt;</code></pre>
+                    <p><strong>The important part:</strong> This sample puts <i>area</i> into a small piece of realistic HTML. Change its content or one attribute at a time and watch what differs.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

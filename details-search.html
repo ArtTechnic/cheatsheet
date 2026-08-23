@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Search Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-search" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>search</h2>
+                    <p>Use <i>search</i> when a piece of HTML represents <strong>search controls group</strong>. Think of it as an HTML building block specifically meant for search controls group.</p>
+                    <p>The opening <i>search</i> tag starts its area and the matching closing tag ends it. Use it when that description matches the content, not simply because its default appearance seems useful.</p>
+                    
+                    <p>Here is a <i>search</i> example to try in a practice page:</p>
+                    <pre class="detail-code"><code>&lt;header&gt;
+  &lt;h1&gt;Movie website&lt;/h1&gt;
+  &lt;search&gt;
+    &lt;form action=&quot;./search/&quot;&gt;
+      &lt;label for=&quot;movie&quot;&gt;Find a Movie&lt;/label&gt;
+      &lt;input type=&quot;search&quot; id=&quot;movie&quot; name=&quot;q&quot; /&gt;
+      &lt;button type=&quot;submit&quot;&gt;Search&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/search&gt;
+&lt;/header&gt;</code></pre>
+                    <p><strong>What to notice:</strong> The key piece in this sample is <code>&lt;search&gt;</code>. Read outward from that tag to see what belongs to it and how it is configured.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/search" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

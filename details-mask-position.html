@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Mask Position Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-mask-position" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>mask-position</h2>
+                    <p>In CSS, <i>mask-position</i> is the setting for <strong>position of mask image</strong>. It helps decide where an element sits and how it relates to nearby boxes.</p>
+                    <p>Place a colon after <code>mask-position</code>, then supply the value you want. When testing this property, remember: positioning properties work as a team, so inspect the containing box as well as the element itself.</p>
+                    
+                    <p>Here is a compact <i>mask-position</i> example you can inspect and alter:</p>
+                    <pre class="detail-code"><code>/* Single &lt;position&gt; keyword value */
+/* Sets second value to &#x27;center&#x27; */
+mask-position: left;
+mask-position: center;
+mask-position: right;
+mask-position: top;
+mask-position: bottom;
+
+/* Two &lt;position&gt; keyword values */
+mask-position: left center;
+mask-position: right top;
+
+/* One length or percentage &lt;position&gt; value */
+/* Horizontal position. Vertical position set to &#x27;center&#x27; */
+mask-position: 25%;
+mask-position: 0px;
+mask-position: 8em;
+
+/* Two length or percentage &lt;position&gt; values */
+/* First value: horizontal position. Second value: vertical position */
+mask-position: 25% 75%;
+mask-position: 0px 0px;
+mask-position: 10% 8em;
+
+/* Edge offsets: Four &lt;position&gt; values */
+mask-position: bottom 10px right 20px;
+mask-position: right 3em bottom 10px;
+mask-position: bottom 10px right 0;
+/* More lines are shown on MDN. */</code></pre>
+                    <p><strong>Reading the example:</strong> The important instruction in the sample is <code>left</code>. It is assigned to <i>mask-position</i> and changes only the part described above.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-position" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

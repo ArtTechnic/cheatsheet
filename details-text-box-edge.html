@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Text Box Edge Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-text-box-edge" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>text-box-edge</h2>
+                    <p>The browser looks at <i>text-box-edge</i> when working out <strong>edge style for text box</strong>. It changes the presentation or flow of writing.</p>
+                    <p>Place a colon after <code>text-box-edge</code>, then supply the value you want. When testing this property, remember: test several lines, long words, and zoomed text—a single short sentence can hide problems.</p>
+                    
+                    <p>A small <i>text-box-edge</i> example looks like this:</p>
+                    <pre class="detail-code"><code>/* Single keyword */
+text-box-edge: auto;
+text-box-edge: text;
+
+/* Two &lt;text-edge&gt; values */
+text-box-edge: text text;
+text-box-edge: text alphabetic;
+text-box-edge: cap alphabetic;
+text-box-edge: ex text;
+
+/* Global values */
+text-box-edge: inherit;
+text-box-edge: initial;
+text-box-edge: revert;
+text-box-edge: revert-layer;
+text-box-edge: unset;</code></pre>
+                    <p><strong>What to notice:</strong> Read the line as ‘set <i>text-box-edge</i> to <code>auto</code>.’ That value is the instruction controlling what you see.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-box-edge" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

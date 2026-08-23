@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Position Area Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-position-area" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>position-area</h2>
+                    <p>With <i>position-area</i>, you can control <strong>area of anchor box for positioning</strong>. It helps decide where an element sits and how it relates to nearby boxes.</p>
+                    <p>Different values give <i>position-area</i> different instructions. Try them one at a time, and remember that positioning properties work as a team, so inspect the containing box as well as the element itself.</p>
+                    
+                    <p>This short sample shows <i>position-area</i> in use:</p>
+                    <pre class="detail-code"><code>/* Default value */
+position-area: none;
+
+/* Two &lt;position-area&gt; keywords defining a single specific tile */
+position-area: top left;
+position-area: start end;
+position-area: block-start center;
+position-area: inline-start block-end;
+position-area: x-start y-end;
+position-area: center self-y-end;
+
+/* Two &lt;position-area&gt; keywords spanning two tiles */
+position-area: top span-left;
+position-area: center span-start;
+position-area: inline-start span-block-end;
+position-area: y-start span-x-end;
+
+/* Two &lt;position-area&gt; keywords spanning three tiles */
+position-area: top span-all;
+position-area: block-end span-all;
+position-area: self-x-start span-all;
+
+/* One &lt;position-area&gt; keyword with an implicit second &lt;position-area&gt; keyword  */
+position-area: top; /* equiv: top span-all */
+position-area: inline-start; /* equiv: inline-start span-all */
+position-area: center; /* equiv: center center */
+position-area: span-all; /* equiv: center center */
+position-area: end; /* equiv: end end */
+/* More lines are shown on MDN. */</code></pre>
+                    <p><strong>What to notice:</strong> The important instruction in the sample is <code>none</code>. It is assigned to <i>position-area</i> and changes only the part described above.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position-area" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Position Try Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-position-try" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>position-try</h2>
+                    <p>Choose <i>position-try</i> when the design needs different <strong>fallback positions for absolute element</strong>. It helps decide where an element sits and how it relates to nearby boxes.</p>
+                    <p>Different values give <i>position-try</i> different instructions. Try them one at a time, and remember that positioning properties work as a team, so inspect the containing box as well as the element itself.</p>
+                    
+                    <p>A practical <i>position-try</i> example is shown below:</p>
+                    <pre class="detail-code"><code>/* position-try-fallbacks only */
+position-try: normal flip-block;
+position-try: top;
+position-try: --custom-try-option;
+position-try: flip-block flip-inline;
+position-try: top, right, bottom;
+position-try: --custom-try-option1, --custom-try-option2;
+position-try:
+  normal flip-block,
+  right,
+  --custom-try-option;
+
+/* position-try-order and position-try-fallbacks */
+position-try: normal none;
+position-try:
+  most-width --custom-try-option1,
+  --custom-try-option2;
+position-try:
+  most-height flip-block,
+  right,
+  --custom-try-option;
+
+/* Global values */
+position-try: inherit;
+position-try: initial;
+position-try: revert;
+position-try: revert-layer;
+position-try: unset;</code></pre>
+                    <p><strong>What this example does:</strong> The sample asks the browser to use <code>normal flip-block</code> for <i>position-try</i>. The property stays the same when you experiment; the value is the part to change.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position-try" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

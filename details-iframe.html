@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Iframe Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-iframe" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>iframe</h2>
+                    <p>Use <i>iframe</i> when a piece of HTML represents <strong>embedded browsing context</strong>. It places another resource or browsing area inside the current page, like making a window that looks into something else.</p>
+                    <p>Anything meant to belong to <i>iframe</i> normally sits inside the pair of tags. Embedded material can affect security, speed, and accessibility, so include only resources you trust and actually need.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Use this <i>iframe</i> sample as a starting point, then change one piece at a time:</p>
+                    <pre class="detail-code"><code>&lt;iframe
+  id=&quot;inlineFrameExample&quot;
+  title=&quot;Inline Frame Example&quot;
+  width=&quot;300&quot;
+  height=&quot;200&quot;
+  src=&quot;https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;amp;layer=mapnik&quot;&gt;
+&lt;/iframe&gt;</code></pre>
+                    <p><strong>What to notice:</strong> Find <code>&lt;iframe&gt;</code> in the sample first. Its attributes and enclosed content provide the information this element needs.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

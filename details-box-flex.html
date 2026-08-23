@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Box Flex Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-box-flex" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>box-flex</h2>
+                    <p>With <i>box-flex</i>, you can control <strong>sets flex grow factor of box</strong>. It helps arrange children inside a layout.</p>
+                    <p>CSS reads this as the name <code>box-flex</code>, a colon, and then a value. As you compare values, some layout properties only work after the parent has been made a grid or flex container.</p>
+                    <p><strong>Important:</strong> This is an older feature. You may meet it in old websites, but you should normally choose a modern alternative for new work.</p>
+                    <p>Use this <i>box-flex</i> sample as a starting point, then change one piece at a time:</p>
+                    <pre class="detail-code"><code>/* &lt;number&gt; values */
+-moz-box-flex: 0;
+-moz-box-flex: 2;
+-moz-box-flex: 3.5;
+-webkit-box-flex: 0;
+-webkit-box-flex: 2;
+-webkit-box-flex: 3.5;
+
+/* Global values */
+-moz-box-flex: inherit;
+-moz-box-flex: initial;
+-moz-box-flex: revert;
+-moz-box-flex: revert-layer;
+-moz-box-flex: unset;
+-webkit-box-flex: inherit;
+-webkit-box-flex: initial;
+-webkit-box-flex: revert;
+-webkit-box-flex: revert-layer;
+-webkit-box-flex: unset;</code></pre>
+                    <p><strong>The important part:</strong> Read the line as ‘set <i>box-flex</i> to <code>0</code>.’ That value is the instruction controlling what you see.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-flex" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

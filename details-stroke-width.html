@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Stroke Width Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-stroke-width" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>stroke-width</h2>
+                    <p>Use <i>stroke-width</i> when you need to change <strong>width of stroke</strong>. It helps decide how large a box or part of a box becomes.</p>
+                    <p>Different values give <i>stroke-width</i> different instructions. Try them one at a time, and remember that padding and borders can also affect the final visible size, especially when box-sizing changes.</p>
+                    <p><strong>Important:</strong> This is not a standard feature, so different browsers may handle it differently. Treat it as something to recognize rather than a dependable first choice.</p>
+                    <p>Use this <i>stroke-width</i> sample as a starting point, then change one piece at a time:</p>
+                    <pre class="detail-code"><code>/* Length and percentage values */
+stroke-width: 0%;
+stroke-width: 1.414px;
+
+/* Global values */
+stroke-width: inherit;
+stroke-width: initial;
+stroke-width: revert;
+stroke-width: revert-layer;
+stroke-width: unset;</code></pre>
+                    <p><strong>What this example does:</strong> Here, <code>0%</code> is the value attached to <i>stroke-width</i>. Change it, refresh the page, and compare the new result with the original.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/stroke-width" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

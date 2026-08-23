@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Wbr Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-wbr" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>wbr</h2>
+                    <p>When you write <i>wbr</i>, you are marking something as <strong>word break opportunity</strong>. This tag helps organise writing so readers and browsers can understand how the words fit together.</p>
+                    <p>Do not add a separate closing tag for <i>wbr</i>. It is a <strong>void element</strong>, with its information supplied through attributes. Do not choose it just because of its default size or spacing; choose it when its meaning matches the writing.</p>
+                    
+                    <p>A small <i>wbr</i> example looks like this:</p>
+                    <pre class="detail-code"><code>&lt;div id=&quot;example-paragraphs&quot;&gt;
+  &lt;p&gt;Fernstraßenbauprivatfinanzierungsgesetz&lt;/p&gt;
+  &lt;p&gt;Fernstraßen&lt;wbr /&gt;bau&lt;wbr /&gt;privat&lt;wbr /&gt;finanzierungs&lt;wbr /&gt;gesetz&lt;/p&gt;
+  &lt;p&gt;Fernstraßen&amp;shy;bau&amp;shy;privat&amp;shy;finanzierungs&amp;shy;gesetz&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <p><strong>What to notice:</strong> Find <code>&lt;wbr&gt;</code> in the sample first. Its attributes and enclosed content provide the information this element needs.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/wbr" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

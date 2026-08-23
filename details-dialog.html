@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dialog Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-dialog" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>dialog</h2>
+                    <p>The name <i>dialog</i> tells you what it represents: <strong>dialog box</strong>. It creates a part of the page that a visitor can open, close, or interact with instead of only reading it.</p>
+                    <p>Put the content belonging to <i>dialog</i> between its opening and closing tags. Make its purpose clear in the visible text so the visitor knows what will happen before using it.</p>
+                    
+                    <p>A practical <i>dialog</i> example is shown below:</p>
+                    <pre class="detail-code"><code>&lt;button command=&quot;show-modal&quot; commandfor=&quot;my-dialog&quot;&gt;Open dialog&lt;/button&gt;
+
+&lt;dialog id=&quot;my-dialog&quot;&gt;
+  &lt;p&gt;This dialog was opened using an invoker command.&lt;/p&gt;
+  &lt;button commandfor=&quot;my-dialog&quot; command=&quot;close&quot;&gt;Close&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
+                    <p><strong>How this sample works:</strong> The key piece in this sample is <code>&lt;dialog&gt;</code>. Read outward from that tag to see what belongs to it and how it is configured.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

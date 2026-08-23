@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Speak As Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-speak-as" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>speak-as</h2>
+                    <p>Use <i>speak-as</i> when you need to change <strong>defines the speak-as property</strong>. It changes one particular part of the browser’s styling calculation.</p>
+                    <p>Add <i>speak-as</i> inside a CSS rule and follow it with a colon and value. A helpful beginner check is this: Change only this property while practising, then compare the before and after result.</p>
+                    <p><strong>Important:</strong> This feature is experimental. Check browser support before relying on it.</p>
+                    <p>Try the following <i>speak-as</i> code in a spare practice file:</p>
+                    <pre class="detail-code"><code>/* single value syntax */
+speak-as: normal;
+speak-as: spell-out;
+speak-as: literal-punctuation;
+speak-as: digits;
+speak-as: no-punctuation;
+
+/* multiple value syntax */
+speak-as: spell-out literal-punctuation;
+speak-as: spell-out no-punctuation;
+speak-as: digits literal-punctuation;
+speak-as: digits no-punctuation;
+speak-as: spell-out digits literal-punctuation;
+speak-as: spell-out digits no-punctuation;</code></pre>
+                    <p><strong>The important part:</strong> The important instruction in the sample is <code>normal</code>. It is assigned to <i>speak-as</i> and changes only the part described above.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/speak-as" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

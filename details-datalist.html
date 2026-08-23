@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Datalist Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-datalist" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">HTML</span>
+                    <h2>datalist</h2>
+                    <p>Use <i>datalist</i> when a piece of HTML represents <strong>predefined options for input</strong>. It is a form building block: forms let a visitor enter information, choose something, or start an action.</p>
+                    <p>Put the content belonging to <i>datalist</i> between its opening and closing tags. Every control needs a clear label, and the page should still make sense when somebody uses only a keyboard.</p>
+                    
+                    <p>Use this <i>datalist</i> sample as a starting point, then change one piece at a time:</p>
+                    <pre class="detail-code"><code>&lt;label for=&quot;ice-cream-choice&quot;&gt;Choose a flavor:&lt;/label&gt;
+&lt;input list=&quot;ice-cream-flavors&quot; id=&quot;ice-cream-choice&quot; name=&quot;ice-cream-choice&quot; /&gt;
+
+&lt;datalist id=&quot;ice-cream-flavors&quot;&gt;
+  &lt;option value=&quot;Chocolate&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;Coconut&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;Mint&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;Strawberry&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;Vanilla&quot;&gt;&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+                    <p><strong>The important part:</strong> Here <i>datalist</i> supplies the meaning described above; the surrounding tags provide the context needed for the example to make sense.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>

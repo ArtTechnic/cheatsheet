@@ -196,8 +196,31 @@ body::after {
     word-break: break-word;
 }
 
+.index-page .table th,
+.index-page .table td {
+    overflow: hidden;
+    overflow-wrap: normal;
+    text-overflow: clip;
+    white-space: nowrap;
+    word-break: normal;
+}
+
 .table tr {
     border-bottom: 1px solid LightGray; /* horizontal line spans full row width */
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tr[id] {
+    scroll-margin-block-start: calc(50vh - 16px);
+}
+
+body:has(.table tr:target) .main-panel::after {
+    content: "";
+    display: block;
+    height: 50vh;
 }
 
 .table thead th {

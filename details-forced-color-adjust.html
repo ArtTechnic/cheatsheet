@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Forced Color Adjust Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.svg">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="detail-page">
+        <header id="header">
+            <div id="header-inner">
+                <div id="header-spacer"></div>
+                <h1 id="title">PROJECT C: Portfolio Cheat Sheet</h1>
+                <nav id="header-nav">
+                    <a href="index.html#row-details-forced-color-adjust" class="nav-btn">BACK</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main-panel">
+                <section class="section">
+                    <span class="detail-category">CSS</span>
+                    <h2>forced-color-adjust</h2>
+                    <p>In CSS, <i>forced-color-adjust</i> is the setting for <strong>how element responds to forced colors</strong>. It changes how something looks rather than changing what the HTML means.</p>
+                    <p>Add <i>forced-color-adjust</i> inside a CSS rule and follow it with a colon and value. A helpful beginner check is this: Check that text remains easy to read and that important information does not depend on colour alone.</p>
+                    
+                    <p>This short sample shows <i>forced-color-adjust</i> in use:</p>
+                    <pre class="detail-code"><code>forced-color-adjust: auto;
+forced-color-adjust: none;
+forced-color-adjust: preserve-parent-color;
+
+/* Global values */
+forced-color-adjust: inherit;
+forced-color-adjust: initial;
+forced-color-adjust: revert;
+forced-color-adjust: revert-layer;
+forced-color-adjust: unset;</code></pre>
+                    <p><strong>The important part:</strong> In this case <i>forced-color-adjust</i> receives <code>auto</code>. Trying a contrasting valid value makes the difference easier to spot.</p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/forced-color-adjust" target="_blank" rel="noopener">MDN reference</a></p>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>Website &copy; ArtTechnic</p>
+        </footer>
+    </body>
+
+</html>
