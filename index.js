@@ -1,7 +1,6 @@
 if (window.location.hash.startsWith("#row-details-")) {
     window.cheatSheetReturnRowId = window.location.hash.slice(1);
     document.documentElement.classList.add("return-position-pending");
-    history.scrollRestoration = "manual";
     history.replaceState(history.state, "", `${window.location.pathname}${window.location.search}`);
 }
 
@@ -21,17 +20,13 @@ if (window.cheatSheetReturnRowId) {
             await document.fonts.ready;
         }
 
-        const centreReturnRow = () => {
-            const rowTop = returnRow.getBoundingClientRect().top + window.scrollY;
-            const centredTop = rowTop - ((window.innerHeight - returnRow.offsetHeight) / 2);
-
-            window.scrollTo(0, Math.max(0, centredTop));
-        };
-
         await new Promise((resolve) => requestAnimationFrame(resolve));
-        centreReturnRow();
+
+        const rowTop = returnRow.getBoundingClientRect().top + window.scrollY;
+        const centredTop = rowTop - ((window.innerHeight - returnRow.offsetHeight) / 2);
+
+        window.scrollTo(0, Math.max(0, centredTop));
         await new Promise((resolve) => requestAnimationFrame(resolve));
-        centreReturnRow();
     }
 
     document.documentElement.classList.remove("return-position-pending");
