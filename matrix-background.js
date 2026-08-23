@@ -9,7 +9,7 @@ document.body.appendChild(matrixEdgeFade);
 const matrixCharacters = "0123456789ABCDEF";
 const matrixPixelSize = 4;
 const matrixSubCellSize = 46;
-const matrixCellSize = 16;
+const matrixCellSize = 32;
 const matrixMobileFontSize = 28;
 const matrixStreamSpeed = 0.48;
 const matrixRotationAngle = 5 * (Math.PI / 180);
