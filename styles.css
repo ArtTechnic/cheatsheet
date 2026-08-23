@@ -32,7 +32,7 @@ html {
     top: 10px;
     width: 100vw;
     z-index: 2;
-    box-shadow: 0 8px 16px 16px Black;
+    box-shadow: 0 8px 16px 16px rgb(0, 32, 16);
 }
 
 #header-inner {
@@ -198,7 +198,7 @@ button {
     bottom: 10px;
     width: 100vw;
     z-index: 2;
-    box-shadow: 0 -8px 16px 16px Black;
+    box-shadow: 0 -8px 16px 16px rgb(0, 32, 16);
 }
 
 #footer p {
@@ -207,7 +207,7 @@ button {
 
 
 body {
-    background-color: Black;
+    background-color: rgb(0, 32, 16);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -215,7 +215,7 @@ body {
 
 body::before,
 body::after {
-    background-color: Black;
+    background-color: rgb(0, 32, 16);
     content: "";
     height: 10px;
     left: 0;
