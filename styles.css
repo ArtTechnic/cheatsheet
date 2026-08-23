@@ -350,8 +350,7 @@ body::after {
 .index-page #about > *,
 .index-page .cheat-sheet h2,
 .index-page .cheat-sheet h3,
-.index-page .cheat-sheet > p,
-.index-page .table thead {
+.index-page .cheat-sheet > p {
     animation: index-fade-in 500ms ease-out both;
 }
 
@@ -359,7 +358,10 @@ body::after {
     animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
 }
 
-.index-page .table thead th,
+.index-page .table thead th {
+    animation: index-fade-in 500ms ease-out both, index-grid-fade-in 500ms ease-out both;
+}
+
 .index-page .table tbody tr:not(:target):not(.return-target) td {
     animation: index-grid-fade-in 500ms ease-out both;
 }
