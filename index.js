@@ -1,27 +1,4 @@
-if (window.location.hash.startsWith("#row-details-")) {
-    window.cheatSheetReturnRowId = window.location.hash.slice(1);
-    history.replaceState(history.state, "", `${window.location.pathname}${window.location.search}`);
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-if (window.cheatSheetReturnRowId) {
-    const returnRow = document.getElementById(window.cheatSheetReturnRowId);
-
-    if (returnRow) {
-        const returnSpacer = document.createElement("div");
-
-        returnSpacer.setAttribute("aria-hidden", "true");
-        returnSpacer.style.height = "50vh";
-        document.querySelector(".main-panel").appendChild(returnSpacer);
-        returnRow.classList.add("return-target");
-
-        const rowTop = returnRow.getBoundingClientRect().top + window.scrollY;
-        const centredTop = rowTop - ((window.innerHeight - returnRow.offsetHeight) / 2);
-
-        window.scrollTo(0, Math.max(0, centredTop));
-    }
-}
-
 const searchForm = document.querySelector("#header-search");
 const searchInput = searchForm.querySelector("input");
 const searchError = document.querySelector("#search-error");

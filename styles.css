@@ -337,6 +337,16 @@ body::after {
     background-color: WhiteSmoke;
 }
 
+.index-page .table tbody tr:target {
+    scroll-margin-top: calc(50vh - 14px);
+}
+
+.index-page .main-panel:has(.table tbody tr:target)::after {
+    content: "";
+    display: block;
+    height: 50vh;
+}
+
 .index-page #about > *,
 .index-page .cheat-sheet h2,
 .index-page .cheat-sheet h3,
