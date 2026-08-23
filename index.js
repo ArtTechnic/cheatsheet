@@ -1,10 +1,9 @@
 if (window.location.hash.startsWith("#row-details-")) {
     window.cheatSheetReturnRowId = window.location.hash.slice(1);
-    document.documentElement.classList.add("return-position-pending");
     history.replaceState(history.state, "", `${window.location.pathname}${window.location.search}`);
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
 if (window.cheatSheetReturnRowId) {
     const returnRow = document.getElementById(window.cheatSheetReturnRowId);
 
@@ -16,20 +15,11 @@ if (window.cheatSheetReturnRowId) {
         document.querySelector(".main-panel").appendChild(returnSpacer);
         returnRow.classList.add("return-target");
 
-        if (document.fonts?.ready) {
-            await document.fonts.ready;
-        }
-
-        await new Promise((resolve) => requestAnimationFrame(resolve));
-
         const rowTop = returnRow.getBoundingClientRect().top + window.scrollY;
         const centredTop = rowTop - ((window.innerHeight - returnRow.offsetHeight) / 2);
 
         window.scrollTo(0, Math.max(0, centredTop));
-        await new Promise((resolve) => requestAnimationFrame(resolve));
     }
-
-    document.documentElement.classList.remove("return-position-pending");
 }
 
 const searchForm = document.querySelector("#header-search");
