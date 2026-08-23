@@ -10,10 +10,10 @@ const matrixCharacters = "0123456789ABCDEF";
 const matrixSubCellSize = 24;
 const matrixCellSize = 16;
 const matrixStreamSpeed = 0.48;
-const matrixRotationCompensation = -5 * (Math.PI / 180);
+const matrixRotationAngle = 5 * (Math.PI / 180);
 const matrixScrollRate = 2;
-const matrixScrollX = -Math.cos(matrixRotationCompensation) * matrixScrollRate;
-const matrixScrollY = Math.sin(matrixRotationCompensation) * matrixScrollRate;
+const matrixScrollX = -matrixScrollRate;
+const matrixScrollY = 0;
 const matrixTrailLength = 16;
 const matrixTrailShades = 8;
 const matrixBaseShade = 1;
@@ -36,7 +36,7 @@ const createMatrixValue = () => {
 
 const resizeMatrix = () => {
     const pixelRatio = Math.min(window.devicePixelRatio, 2);
-    const rotation = Math.abs(matrixRotationCompensation);
+    const rotation = matrixRotationAngle;
     const cosine = Math.cos(rotation);
     const sine = Math.sin(rotation);
 
