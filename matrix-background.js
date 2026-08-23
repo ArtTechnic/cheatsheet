@@ -13,7 +13,6 @@ const matrixCellSize = 32;
 const matrixMobileFontSize = 28;
 const matrixStreamSpeed = 0.48;
 const matrixRotationAngle = 5 * (Math.PI / 180);
-const matrixScrollRate = 2;
 const matrixTrailLength = 16;
 const matrixTrailShades = 8;
 const matrixBaseShade = 1;
@@ -30,7 +29,6 @@ let matrixGridOriginColumn = 0;
 let matrixGridOriginRow = 0;
 let matrixCanvasWidth = 0;
 let matrixCanvasHeight = 0;
-let matrixScrollAccumulator = 0;
 
 const createMatrixValue = () => {
     return matrixCharacters[Math.floor(Math.random() * matrixCharacters.length)];
@@ -66,7 +64,6 @@ const resizeMatrix = () => {
     matrixGridOffsetY = 0;
     matrixGridOriginColumn = 0;
     matrixGridOriginRow = 0;
-    matrixScrollAccumulator = 0;
 
     const columnCount = Math.ceil(matrixCanvasWidth / matrixCellSize);
     const rowCount = Math.ceil(matrixCanvasHeight / matrixCellSize);
@@ -104,7 +101,7 @@ const resizeMatrix = () => {
 
 const saveMatrixState = () => {
     const state = {
-        version: 2,
+        version: 3,
         viewportWidth: window.innerWidth,
         viewportHeight: window.innerHeight,
         columnCount: matrixColumnCount,
@@ -115,8 +112,7 @@ const saveMatrixState = () => {
         gridOffsetX: matrixGridOffsetX,
         gridOffsetY: matrixGridOffsetY,
         gridOriginColumn: matrixGridOriginColumn,
-        gridOriginRow: matrixGridOriginRow,
-        scrollAccumulator: matrixScrollAccumulator
+        gridOriginRow: matrixGridOriginRow
     };
 
     try {
@@ -134,7 +130,7 @@ const restoreMatrixState = () => {
         const matchesGrid = state?.columnCount === matrixColumnCount
             && state?.rowCount === matrixRowCount;
 
-        if (state?.version !== 2 || !matchesViewport || !matchesGrid) {
+        if (state?.version !== 3 || !matchesViewport || !matchesGrid) {
             return;
         }
 
@@ -145,7 +141,6 @@ const restoreMatrixState = () => {
         matrixGridOffsetY = state.gridOffsetY;
         matrixGridOriginColumn = state.gridOriginColumn;
         matrixGridOriginRow = state.gridOriginRow;
-        matrixScrollAccumulator = state.scrollAccumulator;
     } catch {
         // Ignore incomplete state and use the freshly generated background.
     }
@@ -155,12 +150,7 @@ const drawMatrix = (time) => {
     if (time - matrixPreviousTime >= 40) {
         matrixContext.clearRect(0, 0, matrixCanvasWidth, matrixCanvasHeight);
 
-        matrixScrollAccumulator += matrixScrollRate;
-
-        if (matrixScrollAccumulator >= matrixPixelSize) {
-            matrixGridOffsetX -= matrixPixelSize;
-            matrixScrollAccumulator -= matrixPixelSize;
-        }
+        matrixGridOffsetX -= matrixPixelSize;
 
         if (matrixGridOffsetX <= -matrixCellSize) {
             matrixGridOffsetX += matrixCellSize;
