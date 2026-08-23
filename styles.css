@@ -337,14 +337,28 @@ body::after {
     background-color: WhiteSmoke;
 }
 
+.index-page .table tbody tr:target > * {
+    animation: return-target-reveal 1ms step-end 100ms both;
+}
+
 .index-page .table tbody tr:target {
-    scroll-margin-top: calc(50vh - 14px);
+    scroll-margin-top: calc(50vh - 11px);
 }
 
 .index-page .main-panel:has(.table tbody tr:target)::after {
     content: "";
     display: block;
     height: 50vh;
+}
+
+@keyframes return-target-reveal {
+    from {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: visible;
+    }
 }
 
 .index-page #about > *,
