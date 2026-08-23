@@ -66,13 +66,19 @@ html {
 
 #header-search input {
     background-color: WhiteSmoke;
-    border: 1px solid WhiteSmoke;
+    border: 3px solid WhiteSmoke;
     border-radius: 6px;
     color: black;
     cursor: text;
     display: block;
     padding: 4px;
     width: 100%;
+}
+
+#header-search input:focus {
+    border-color: White;
+    box-shadow: 0 0 8px White;
+    outline: none;
 }
 
 .index-page #header-nav {
@@ -111,7 +117,7 @@ button {
 
 #html-table,
 #css-table {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 128px;
 }
 
 #search-error {
@@ -164,8 +170,8 @@ button {
 }
 
 #search-suggestions button:hover {
-    background-color: DimGray;
-    color: WhiteSmoke;
+    background-color: White;
+    color: black;
 }
 
 #footer {
@@ -369,6 +375,10 @@ body:has(.table tr:target) .main-panel::after {
     cursor: pointer;
 }
 
+.table tr.clickable-row.is-pointer-hovered > td {
+    background-color: White;
+}
+
 .table tr.no-bottom { border-bottom: none; }
 
 #about h2 {
@@ -381,6 +391,7 @@ body:has(.table tr:target) .main-panel::after {
 }
 
 .cheat-sheet h2 {
+    margin: 4px 0 14px;
     text-align: center;
 }
 
@@ -399,7 +410,7 @@ body:has(.table tr:target) .main-panel::after {
     width: calc(100% - 40px);
     max-width: 1040px;
     min-width: 0;
-    margin: 30px 20px 20px;
+    margin: 40px 20px 20px;
     box-shadow: 0 8px 20px DimGray;
     border-radius: 6px;
 }

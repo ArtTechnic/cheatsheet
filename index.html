@@ -46,15 +46,13 @@ ONE-CLICK PUBLISH TEST
 
                 <section class="section" id="about"><!--LEFT/TOP PANEL-->
                     <h2 class="h2">About this site</h2>
-                    <p>This site is a reference cheat sheet for HTML and CSS.</p>
-                    <p>Feel free to visit the relevant page on the <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN
-                        Web Docs</a> site by clicking the link in the description pages or by clicking on the name of the item in the list below.</p>
+                    <p>This site is a reference cheat sheet for HTML and CSS. Feel free to visit the relevant page on the
+                        <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a> site by
+                        clicking the link in the description pages if the descriptions provided are not enough.</p>
                 </section>
 
                 <section class="section cheat-sheet"><!--HTML TABLE PANEL-->
                     <h2 id="html-cheat">HTML Cheat Sheet</h2>
-                    <p>This first table shows many of the most commonly used HTML tags and their syntax, giving you a compact reference for the most important page elements.<br><br></p>
-                    <h3>HTML</h3>
                     <div class="table" id="html-table">
                         <table>
                         <colgroup>
@@ -733,8 +731,6 @@ ONE-CLICK PUBLISH TEST
 
                 <section class="section cheat-sheet css-reference"><!--CSS TABLE PANEL-->
                     <h2 id="css-cheat">CSS Cheat Sheet</h2>
-                    <p>This table covers the most commonly used CSS properties, their syntax, and a short description of what each one does.<br><br></p>
-                    <h3>CSS</h3>
                     <div class="table" id="css-table">
                         <table>
                         <colgroup>
@@ -3578,6 +3574,42 @@ ONE-CLICK PUBLISH TEST
             const searchSuggestionList = document.querySelector("#search-suggestion-list");
             const searchRows = [...document.querySelectorAll(".cheat-sheet tbody tr")];
             let searchErrorTimer;
+            let highlightedRow;
+            let pointerX = -1;
+            let pointerY = -1;
+            let rowHighlightFrame;
+
+            const updateRowHighlight = () => {
+                const rowUnderPointer = document.elementFromPoint(pointerX, pointerY)?.closest("tr.clickable-row");
+
+                if (rowUnderPointer !== highlightedRow) {
+                    highlightedRow?.classList.remove("is-pointer-hovered");
+                    rowUnderPointer?.classList.add("is-pointer-hovered");
+                    highlightedRow = rowUnderPointer;
+                }
+
+                rowHighlightFrame = undefined;
+            };
+
+            const requestRowHighlightUpdate = () => {
+                if (rowHighlightFrame === undefined) {
+                    rowHighlightFrame = requestAnimationFrame(updateRowHighlight);
+                }
+            };
+
+            document.addEventListener("pointermove", (event) => {
+                pointerX = event.clientX;
+                pointerY = event.clientY;
+                requestRowHighlightUpdate();
+            });
+
+            document.addEventListener("scroll", requestRowHighlightUpdate, true);
+
+            document.addEventListener("pointerleave", () => {
+                pointerX = -1;
+                pointerY = -1;
+                requestRowHighlightUpdate();
+            });
 
             searchRows.forEach((row) => {
                 row.addEventListener("click", () => {
