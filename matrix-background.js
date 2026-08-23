@@ -7,12 +7,13 @@ matrixEdgeFade.setAttribute("aria-hidden", "true");
 document.body.appendChild(matrixEdgeFade);
 
 const matrixCharacters = "0123456789ABCDEF";
-const matrixPixelSize = 4;
-const matrixSubCellSize = 46;
-const matrixCellSize = 32;
-const matrixMobileFontSize = 28;
+const matrixPixelSize = 1;
+const matrixSubCellSize = 24;
+const matrixCellSize = 16;
+const matrixMobileFontSize = 14;
 const matrixStreamSpeed = 0.48;
-const matrixRotationAngle = 5 * (Math.PI / 180);
+const matrixRotationAngle = 0;
+const matrixScrollRate = 2;
 const matrixTrailLength = 16;
 const matrixTrailShades = 8;
 const matrixBaseShade = 1;
@@ -117,7 +118,7 @@ const resizeMatrix = () => {
 
 const saveMatrixState = () => {
     const state = {
-        version: 3,
+        version: 4,
         viewportWidth: window.innerWidth,
         viewportHeight: window.innerHeight,
         columnCount: matrixColumnCount,
@@ -146,7 +147,7 @@ const restoreMatrixState = () => {
         const matchesGrid = state?.columnCount === matrixColumnCount
             && state?.rowCount === matrixRowCount;
 
-        if (state?.version !== 3 || !matchesViewport || !matchesGrid) {
+        if (state?.version !== 4 || !matchesViewport || !matchesGrid) {
             return;
         }
 
@@ -166,8 +167,7 @@ const drawMatrix = (time) => {
     if (time - matrixPreviousTime >= 40) {
         clearMatrixCanvas();
 
-        matrixGridOffsetX -= matrixPixelSize;
-        matrixGridOffsetY -= matrixPixelSize * Math.tan(matrixRotationAngle);
+        matrixGridOffsetX -= matrixScrollRate;
 
         if (matrixGridOffsetX <= -matrixCellSize) {
             matrixGridOffsetX += matrixCellSize;
